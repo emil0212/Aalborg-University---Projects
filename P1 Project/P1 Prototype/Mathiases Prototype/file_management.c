@@ -30,16 +30,6 @@ groceries_list * open_files() {
     return lists;
 }
 
-void print_groceries(groceries_list grocery_list[], store_t store_list[]) {
-
-    for (int i = 0; i < MAX_STORES; i++) {
-        printf("\nThe store %s has these products:\n", store_list[i].name);
-        for (int k = 0; k < MAX; k++) {
-            printf("\nProduct %d:\nName: %s \nPrice: %lf\n", grocery_list[i].id[k], grocery_list[i].name[k], grocery_list[i].cost[k]);
-        }
-    }
-}
-
 groceries_list make_groceries (FILE *fp) {
     groceries_list list;
 
