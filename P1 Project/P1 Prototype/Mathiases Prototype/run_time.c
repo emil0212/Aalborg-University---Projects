@@ -36,7 +36,7 @@ void run_time() {
 
     //printf("%lf", sumOfProducts(ptrToFinalGroceriesList, numberOfStores, user));
 
-    ptrToSumArray = sumOfProducts(&ptrToFinalGroceriesList, numberOfStores, user);
+    ptrToSumArray = sumOfProducts(ptrToFinalGroceriesList, numberOfStores, user);
 
     print(ptrToFinalGroceriesList, user, ptrToFinalStoreList, numberOfStores, ptrToSumArray);
 }

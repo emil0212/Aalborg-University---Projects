@@ -10,5 +10,5 @@
 
 groceries_list * open_files();
 store_t * open_stores();
-groceries_list make_groceries (FILE *fp);
-store_t make_stores(FILE *fp);
+groceries_list collect_list_of_groceries (FILE *fp);
+store_t collect_store_info(FILE *fp);
