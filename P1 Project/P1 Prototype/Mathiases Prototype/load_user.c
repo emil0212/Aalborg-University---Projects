@@ -126,7 +126,6 @@ double distance(double lat1, double lon1, double lat2, double lon2) {
     return dist;
 }
 
-
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::  This function converts decimal degrees to radians             :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -181,6 +180,12 @@ userdata create_user() {
     return session;
 }
 
+/**
+ * Name:
+ * Description:
+ * @param list
+ * @return
+ */
 int create_shoppinglist(FILE *list) {
     int i = 0;
 

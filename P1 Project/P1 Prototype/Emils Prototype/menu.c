@@ -2,7 +2,6 @@
 #include <time.h>
 #include <stdbool.h>
 #include <string.h>
-#include <conio.h>
 
 #include "menu.h"
 #include "utilities.h"
@@ -13,6 +12,9 @@ t_user_profile create_user_profile(FILE * file){
 
     fscanf(file, "%s %s %u %lf %d %s %s", &new_profile.name, &new_profile.address, &new_profile.transport,
            &new_profile.max_distance, &new_profile.age, &new_profile.username, &new_profile.password);
+
+    /*printf("\n New profile: %s | %s | %u | %lf | %d | %s | %s", new_profile.name, new_profile.address, new_profile.transport,
+           new_profile.max_distance, new_profile.age, new_profile.username, new_profile.password);*/
 
     return new_profile;
 }
@@ -41,7 +43,7 @@ void login_page(){
     char username[30]; char password[30];
 
     FILE * file;
-    file = fopen("User_Profile.txt", "w+");
+    file = fopen("User_Profile.txt", "r");
 
     printf("Please enter your username> \n");
     scanf("%s", &(*username));
@@ -68,17 +70,15 @@ void main_menu(t_user_profile profile){
     time_t current_time;
     time(&current_time);
 
-    do {
-        printf("----------------------------------------\n");
-        printf("Session started at %s\n", ctime(&current_time));
-        printf("P1 Prototype | Welcome %s\n", profile.name);
-        printf("1) View your profile\n");
-        printf("2) View your cart\n");
-        printf("3) Create a cart\n");
-        printf("4) Search\n");
-        printf("5) Logout\n");
-        scanf("%d", &choice);
-    }while (choice != 5);
+    printf("----------------------------------------\n");
+    printf("Session started at %s\n", ctime(&current_time));
+    printf("P1 Prototype | Welcome %s\n", profile.name);
+    printf("1) View your profile\n");
+    printf("2) View your cart\n");
+    printf("3) Create a cart\n");
+    printf("4) Search\n");
+    printf("5) Logout\n");
+    scanf("%d", &choice);
 }
 
 void initial_screen(){
