@@ -60,7 +60,7 @@ void bsortDesc(store_t stores[], int s)
     }
 }
 
-void print(groceries_list grocery_list[], userdata user, store_t new_stores[], int num) {
+void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
     printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
