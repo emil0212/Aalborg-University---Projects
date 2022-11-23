@@ -20,7 +20,7 @@ void run_time() {
     sumOfProducts(ptrToAllStoreGroceries, ptrToAllStoreList);
     bsortDesc(ptrToAllStoreList, MAX_STORES);
 
-    print(ptrToAllStoreGroceries, user, ptrToAllStoreList, MAX_STORES);
+    print(ptrToAllStoreGroceries, user, ptrToAllStoreList);
 }
 
 void sumOfProducts(groceries_list list[], store_t store[]) {
@@ -73,7 +73,7 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
     printf("\n\nStores found within %lf km from your location:", user.distance);
     for (int i = 0; i < MAX_STORES; i++) {
         if (new_stores[i].distance <= user.distance) {
-            printf("\n%s %s | TOTAL PRICE: %lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
+            printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
         }
     }
 }
