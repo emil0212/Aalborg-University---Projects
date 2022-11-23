@@ -1,6 +1,5 @@
 #include "run_time.h"
 
-
 //The function run time uses all the different functions and holds all the data
 void run_time() {
 
@@ -41,62 +40,6 @@ void run_time() {
     print(ptrToFinalGroceriesList, user, ptrToFinalStoreList, numberOfStores, ptrToSumArray);
 }
 
-/*double sumOfProducts(groceries_list groceriesList[], int num, userdata user) {
-    double sum = 0;
-
-
-        for (int k = 0; k < user.amount; k++) {
-            for(int j = 0; j < MAX; j++)
-            {
-                if(*groceriesList[0].name[j] == *userproducts[k])
-                    sum += groceriesList[0].cost[j];
-            }
-        }
-    return sum;
-}*/
-
-double * sumOfProducts(groceries_list groceries_list[], int num, userdata user) {
-    double sum;
-    double* arrayOfSum = malloc(num * sizeof *arrayOfSum);
-
-    for (int i = 0; i < num; i++) {
-        sum = 0;
-        for (int k = 0; k < user.amount; k++) {
-
-            for(int j = 0; j < MAX; j++)
-            {
-                if(userproducts[k] == groceries_list[i].name[j])
-                    arrayOfSum[i] += groceries_list[i].cost[j];
-            }
-
-
-
-            /*if(valueinarray(k, i, groceries_list)) {
-                sum += groceries_list[i].cost[k];
-            }
-
-
-
-            if (userproducts[k] == groceries_list[i].name[k]) {
-                sum += groceries_list[i].cost[k];
-            }*/
-        }
-    }
-    return arrayOfSum;
-}
-
-
-int valueinarray(int product, int store_id, groceries_list groceries_list[])
-{
-    int j;
-    for(j = 0; j < MAX; j++)
-    {
-        if(groceries_list[store_id].name[j] == userproducts[product])
-            return 1;
-    }
-    return 0;
-}
-
 int find_amount_of_eliminated_stores(userdata user, store_t store_list[]) {
     int i, k = 0;
     for (i = 0; i < MAX_STORES; i++) {
@@ -134,6 +77,37 @@ groceries_list * eliminate_groceries(userdata user, store_t store_list[], grocer
     return lists2;
 }
 
+/**
+ *
+ * @param products = alle produkter i vores kurv
+ * @param length1 = størrelsen af shopping_cart_products
+ * @param grocery_list = listen af alle produkter
+ * @param length2 = session.amount
+ * @return
+ */
+double find_sum_of_products_in_shoppingcart(char shopping_cart_products[100][15], int length1, groceries_list grocery_list[], int length2, int store){
+    double sum;
+
+    int local_arr[length2];
+
+    for (int i = 0, k = 0; k <= length2; i++){
+        if (strcmp(shopping_cart_products[i], grocery_list[store].name[k]) == 0)
+        {
+            local_arr[k] = i;
+            i = 0;
+            k++;
+        }
+    }
+
+    /*
+     * Vi skal bare finde priserne for alle produkter i positionerne i grocies.txt'er som er allokeret i local_arr
+     * Derefter finder vi summen af de priser.
+     * */
+
+    return sum;
+}
+
+
 void print(groceries_list grocery_list[], userdata user, store_t new_stores[], int num, double arr[]) {
     printf("\nYour name is set to: %s "
            "\nYour location is: %lf %lf"
@@ -141,10 +115,14 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[], i
            "\nYou have %d item(s) in your shopping list:", user.name, user.location_x, user.location_y, transport_names[user.mode - 1], user.distance, user.amount);
 
     for (int i = 0; i < user.amount; i++) {
-        printf("\n%s", userproducts[i]);
+        printf("\n[%d] %s",i, userproducts[i]);
     }
 
-    printf("\nStores found within %lf km from your location:", user.distance);
+
+
+    //Har kommenteret det her ud så vi kan debugge nemmere
+
+    /*printf("\nStores found within %lf km from your location:", user.distance);
     for (int i = 0; i < num; i++) {
         printf("\nThe store %s has been found and is located %lf km away from you,\nand has these products and prices:", new_stores[i].name, distance(user.location_x, user.location_y, new_stores[i].x_coordinates, new_stores[i].y_coordinates));
 
@@ -154,11 +132,9 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[], i
     }
 
     for (int j = 0; j < num; j++) {
-    printf("\n%lf", arr[j]);
+    printf("\n%lf", arr[j]);*/
 }
 
-
-}
 
 userdata create_user() {
     userdata session;
@@ -175,7 +151,9 @@ userdata create_user() {
     FILE *myFile;
 
     myFile = fopen(filename, "r");
+    printf("\n name of file: %s", filename);
     session.amount = create_shoppinglist(myFile);
+    printf("\nsession.amount = %d", session.amount);
 
     return session;
 }
@@ -188,10 +166,10 @@ int create_shoppinglist(FILE *list) {
         perror("Unable to open file");
         exit(EXIT_FAILURE);
     } else {
-        while (!feof(list)) {
+        do {
             fscanf(list, "%s", userproducts[i]);
             i++;
-        }
+        }while (!feof(list));
     }
     return i;
 }
