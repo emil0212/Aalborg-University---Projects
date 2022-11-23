@@ -10,8 +10,8 @@
 char userproducts[100][15];
 
 int create_shoppinglist(FILE *list);
-void print(groceries_list grocery_list[], userdata user, store_t new_stores[], int num, double arr[]);
+void print(groceries_list grocery_list[], userdata user, store_t new_stores[], int num);
 userdata create_user();
-double * sumOfProducts(groceries_list groceriesList[], int num, userdata user);
 int cmp( const void *a, const void *b );
 void bsortDesc(store_t stores[], int s);
+void sumOfProducts(groceries_list list[], store_t store[]);

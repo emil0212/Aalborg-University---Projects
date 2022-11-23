@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype"
+CMAKE_SOURCE_DIR = "K:\Aalborg-University---Projects\P1 Project\P1 Prototype"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug"
+CMAKE_BINARY_DIR = "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -140,6 +140,19 @@ Mathias: cmake_check_build_system
 Mathias/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias.dir\build.make CMakeFiles/Mathias.dir/build
 .PHONY : Mathias/fast
+
+#=============================================================================
+# Target rules for targets named Mathias2
+
+# Build rule for target.
+Mathias2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mathias2
+.PHONY : Mathias2
+
+# fast build rule for target.
+Mathias2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/build
+.PHONY : Mathias2/fast
 
 Emils_Prototype/main.obj: Emils_Prototype/main.c.obj
 .PHONY : Emils_Prototype/main.obj
@@ -333,6 +346,102 @@ Mathiases_Prototype/run_time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias.dir\build.make CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.s
 .PHONY : Mathiases_Prototype/run_time.c.s
 
+Mathiases_Prototype2/distance.obj: Mathiases_Prototype2/distance.c.obj
+.PHONY : Mathiases_Prototype2/distance.obj
+
+# target to build an object file
+Mathiases_Prototype2/distance.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.obj
+.PHONY : Mathiases_Prototype2/distance.c.obj
+
+Mathiases_Prototype2/distance.i: Mathiases_Prototype2/distance.c.i
+.PHONY : Mathiases_Prototype2/distance.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/distance.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.i
+.PHONY : Mathiases_Prototype2/distance.c.i
+
+Mathiases_Prototype2/distance.s: Mathiases_Prototype2/distance.c.s
+.PHONY : Mathiases_Prototype2/distance.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/distance.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.s
+.PHONY : Mathiases_Prototype2/distance.c.s
+
+Mathiases_Prototype2/file_management.obj: Mathiases_Prototype2/file_management.c.obj
+.PHONY : Mathiases_Prototype2/file_management.obj
+
+# target to build an object file
+Mathiases_Prototype2/file_management.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.obj
+.PHONY : Mathiases_Prototype2/file_management.c.obj
+
+Mathiases_Prototype2/file_management.i: Mathiases_Prototype2/file_management.c.i
+.PHONY : Mathiases_Prototype2/file_management.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/file_management.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.i
+.PHONY : Mathiases_Prototype2/file_management.c.i
+
+Mathiases_Prototype2/file_management.s: Mathiases_Prototype2/file_management.c.s
+.PHONY : Mathiases_Prototype2/file_management.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/file_management.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.s
+.PHONY : Mathiases_Prototype2/file_management.c.s
+
+Mathiases_Prototype2/main.obj: Mathiases_Prototype2/main.c.obj
+.PHONY : Mathiases_Prototype2/main.obj
+
+# target to build an object file
+Mathiases_Prototype2/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.obj
+.PHONY : Mathiases_Prototype2/main.c.obj
+
+Mathiases_Prototype2/main.i: Mathiases_Prototype2/main.c.i
+.PHONY : Mathiases_Prototype2/main.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.i
+.PHONY : Mathiases_Prototype2/main.c.i
+
+Mathiases_Prototype2/main.s: Mathiases_Prototype2/main.c.s
+.PHONY : Mathiases_Prototype2/main.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.s
+.PHONY : Mathiases_Prototype2/main.c.s
+
+Mathiases_Prototype2/run_time.obj: Mathiases_Prototype2/run_time.c.obj
+.PHONY : Mathiases_Prototype2/run_time.obj
+
+# target to build an object file
+Mathiases_Prototype2/run_time.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.obj
+.PHONY : Mathiases_Prototype2/run_time.c.obj
+
+Mathiases_Prototype2/run_time.i: Mathiases_Prototype2/run_time.c.i
+.PHONY : Mathiases_Prototype2/run_time.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/run_time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.i
+.PHONY : Mathiases_Prototype2/run_time.c.i
+
+Mathiases_Prototype2/run_time.s: Mathiases_Prototype2/run_time.c.s
+.PHONY : Mathiases_Prototype2/run_time.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/run_time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.s
+.PHONY : Mathiases_Prototype2/run_time.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -342,6 +451,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Mathias
+	@echo ... Mathias2
 	@echo ... P1_Prototype
 	@echo ... Emils_Prototype/main.obj
 	@echo ... Emils_Prototype/main.i
@@ -367,6 +477,18 @@ help:
 	@echo ... Mathiases_Prototype/run_time.obj
 	@echo ... Mathiases_Prototype/run_time.i
 	@echo ... Mathiases_Prototype/run_time.s
+	@echo ... Mathiases_Prototype2/distance.obj
+	@echo ... Mathiases_Prototype2/distance.i
+	@echo ... Mathiases_Prototype2/distance.s
+	@echo ... Mathiases_Prototype2/file_management.obj
+	@echo ... Mathiases_Prototype2/file_management.i
+	@echo ... Mathiases_Prototype2/file_management.s
+	@echo ... Mathiases_Prototype2/main.obj
+	@echo ... Mathiases_Prototype2/main.i
+	@echo ... Mathiases_Prototype2/main.s
+	@echo ... Mathiases_Prototype2/run_time.obj
+	@echo ... Mathiases_Prototype2/run_time.i
+	@echo ... Mathiases_Prototype2/run_time.s
 .PHONY : help
 
 

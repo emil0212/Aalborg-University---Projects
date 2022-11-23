@@ -17,17 +17,28 @@ void run_time() {
     store_t *ptrToAllStoreList = all_store_list;
     ptrToAllStoreList = open_stores(user);
 
-    double sumArray[MAX_STORES];
-    double *ptrToSumArray = sumArray;
-
-    //printf("%lf", sumOfProducts(ptrToFinalGroceriesList, numberOfStores, user));
-
-    //ptrToSumArray = sumOfProducts(ptrToFinalGroceriesList, numberOfStores, user);
-
+    sumOfProducts(ptrToAllStoreGroceries, ptrToAllStoreList);
     bsortDesc(ptrToAllStoreList, MAX_STORES);
 
-    print(ptrToAllStoreGroceries, user, ptrToAllStoreList, MAX_STORES, ptrToSumArray);
+    print(ptrToAllStoreGroceries, user, ptrToAllStoreList, MAX_STORES);
 }
+
+void sumOfProducts(groceries_list list[], store_t store[]) {
+    double sum;
+    int j;
+
+    for (int i = 0; i < MAX_STORES; i++) {
+        j = 0, sum = 0;
+        for (int k = 0; k < MAX; k++) {
+            if (strcmp(userproducts[j], list[i].name[k]) == 0) {
+                sum += list[i].cost[k];
+                j++;
+            }
+        }
+        store[i].sum = sum;
+    }
+}
+
 
 /* This function sorts all the stores after lowest price */
 void bsortDesc(store_t stores[], int s)
@@ -39,7 +50,7 @@ void bsortDesc(store_t stores[], int s)
     {
         for (j = 0; j < (s - 1-i); j++)
         {
-            if (stores[j].distance > stores[j + 1].distance)
+            if (stores[j].sum > stores[j + 1].sum)
             {
                 temp = stores[j];
                 stores[j] = stores[j + 1];
@@ -49,32 +60,22 @@ void bsortDesc(store_t stores[], int s)
     }
 }
 
-void print(groceries_list grocery_list[], userdata user, store_t new_stores[], int num, double arr[]) {
+void print(groceries_list grocery_list[], userdata user, store_t new_stores[], int num) {
     printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
-           "\nYou have %d item(s) in your shopping list:", user.name, user.location_x, user.location_y, transport_names[user.mode - 1], user.distance, user.amount);
+           "\n\nYou have %d item(s) in your shopping list:", user.name, user.location_x, user.location_y, transport_names[user.mode - 1], user.distance, user.amount);
 
     for (int i = 0; i < user.amount; i++) {
         printf("\n%s", userproducts[i]);
     }
 
-    printf("\nStores found within %lf km from your location:", user.distance);
+    printf("\n\nStores found within %lf km from your location:", user.distance);
     for (int i = 0; i < MAX_STORES; i++) {
         if (new_stores[i].distance <= user.distance) {
-            printf("\nThe store %s has been found and is located %lf km away from you,\nand has these products and prices:", new_stores[i].name, new_stores[i].distance/*distance(user.location_x, user.location_y, new_stores[i].x_coordinates, new_stores[i].y_coordinates)*/);
-
-            for (int k = 0; k < MAX; k++) {
-                printf("\nProduct %d:\nName: %s \nPrice: %lf\n", grocery_list[i].id[k], grocery_list[i].name[k], grocery_list[i].cost[k]);
-            }
+            printf("\n%s %s | TOTAL PRICE: %lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
         }
     }
-
-    for (int j = 0; j < num; j++) {
-        printf("\n%lf", arr[j]);
-    }
-
-
 }
 
 userdata create_user() {

@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "menu.h"
+#include "main.h"
 
 int main() {
-    initial_screen();
+    run_time();
     return 0;
 }

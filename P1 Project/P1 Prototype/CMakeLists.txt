@@ -5,6 +5,9 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(P1_Prototype "Emils Prototype/main.c" "Emils Prototype/menu.c" "Emils Prototype/menu.h" "Emils Prototype/settings.c" "Emils Prototype/settings.h" "Emils Prototype/utilities.h" "Emils Prototype/utilities.c")
 add_executable(Mathias "Mathiases Prototype/main.c" "Mathiases Prototype/main.h" "Mathiases Prototype/file_management.c" "Mathiases Prototype/file_management.h" "Mathiases Prototype/distance.c" "Mathiases Prototype/distance.h" "Mathiases Prototype/run_time.c" "Mathiases Prototype/run_time.h")
+add_executable(Mathias2 "Mathiases Prototype2/main.c" "Mathiases Prototype2/main.h" "Mathiases Prototype2/file_management.c" "Mathiases Prototype2/file_management.h" "Mathiases Prototype2/distance.c" "Mathiases Prototype2/distance.h" "Mathiases Prototype2/run_time.c" "Mathiases Prototype2/run_time.h")
+
+
 
 file(COPY User_database/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY Lists/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
