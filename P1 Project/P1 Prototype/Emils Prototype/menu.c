@@ -2,69 +2,124 @@
 #include <time.h>
 #include <stdbool.h>
 #include <string.h>
+#include <malloc.h>
 
 #include "menu.h"
-#include "utilities.h"
+#include "memory.h"
 
-t_user_profile create_user_profile(FILE * file){
+#define MAX_ARR 255
 
+const char* string_from_enum_transport(e_transport eTransport)
+{
+    const char *strings[] = {"Walk", "Bycicle", "Car", "Bus"};
+    return strings[eTransport];
+}
+
+int file_size(FILE * file, char * file_name){
+    int count = 0;
+    char i;
+    file = fopen(file_name, "r");
+
+    if (file == NULL){
+        perror("Unable to open file");
+        exit(EXIT_FAILURE);
+    }
+
+    for ( i = getc(file); i != EOF; i = getc(file))
+        if (i == '\n')
+            count++;
+
+    fclose(file);
+
+    return count;
+}
+
+t_user_profile * load_user_profiles(FILE * file)
+{
+    char            *file_name      = "Userprofiles.txt";
+    //file                            = fopen(file_name, "r");
+    int             l_file_size     = file_size(file, file_name);
+    t_user_profile *user_profile    = malloc(100000 * sizeof(*user_profile));
+
+    if (file == NULL){
+        perror("Unable to open file");
+        exit(EXIT_FAILURE);
+    }
+
+    for (int i = 0; i < l_file_size; i++){
+        fscanf(file, " %s",  user_profile[i].name);
+        fscanf(file, " %s",  user_profile[i].address);
+        fscanf(file, " %s",  user_profile[i].username);
+        fscanf(file, " %s",  user_profile[i].password);
+
+        fscanf(file, " %lf", &user_profile[i].longitude);
+        fscanf(file, " %lf", &user_profile[i].latitude);
+        fscanf(file, " %lf", &user_profile[i].max_distance);
+
+        fscanf(file, " %d",  &user_profile[i].age);
+        fscanf(file, " %u",  &user_profile[i].transport);
+    }
+
+    fclose(file);
+
+    return user_profile;
+}
+
+t_user_profile create_user_profile(char* name, char* address, char* username, char* password,
+                                   double longitude, double latitude, double max_distance,
+                                   int age, e_transport transport){
     t_user_profile new_profile;
 
-    fscanf(file, "%s %s %u %lf %d %s %s", &new_profile.name, &new_profile.address, &new_profile.transport,
-           &new_profile.max_distance, &new_profile.age, &new_profile.username, &new_profile.password);
-
-    /*printf("\n New profile: %s | %s | %u | %lf | %d | %s | %s", new_profile.name, new_profile.address, new_profile.transport,
-           new_profile.max_distance, new_profile.age, new_profile.username, new_profile.password);*/
+    new_profile.name = name;
+    new_profile.address = address;
+    new_profile.username = username;
+    new_profile.password = password;
+    new_profile.max_distance = max_distance;
+    new_profile.age = age;
+    new_profile.transport = transport;
 
     return new_profile;
 }
 
-bool check_login_operation(FILE * file, char * username, char * password, t_user_profile profile){
-
-    if (file == NULL)
-        return false;
-
-    if (!strcmp(profile.username, username) || !strcmp(profile.password, password))
+bool check_login_operation(char * temp_username, char * temp_password, t_user_profile profile)
+{
+    if (strcmp(profile.username, temp_username) != 0 || strcmp(profile.password, temp_password) != 0)
         return false;
 
     return true;
 }
 
-void forgot_password(){
-
-}
-
-void register_page(){
-
-}
-
-void login_page(){
-
-    char username[30]; char password[30];
-
-    FILE * file;
-    file = fopen("User_Profile.txt", "r");
+void login_page()
+{
+    char temp_username[30];
+    char temp_password[30];
 
     printf("Please enter your username> \n");
-    scanf("%s", &(*username));
+    scanf("%s", temp_username);
 
     printf("Please enter your password> \n");
-    scanf("%s", &(*password));
+    scanf("%s", temp_password);
 
-    printf("Username: %s | Password: %s\n", username, password);
+    FILE * file;
+    char * filename = "Userprofiles.txt";
+    file = fopen(filename, "r");
 
-    t_user_profile database_profile = create_user_profile(file);
+    t_user_profile *profiles_in_database = load_user_profiles(file);
 
-    if (check_login_operation(file, username, password, database_profile) == false){
+    printf("Username & Password> %s, %s\n", profiles_in_database[0].username, profiles_in_database[0].password);
+
+    //free(profiles_in_database);
+
+    /*if (check_login_operation(temp_username, temp_password, database_profile) == false){
         printf("Invalid login\n");
         login_page();
-    }
+    }*/
 
-    main_menu(database_profile);
+    //main_menu(database_profile);
 }
 
-void main_menu(t_user_profile profile){
-
+void main_menu(t_user_profile profile)
+{
     int choice;
 
     time_t current_time;
@@ -81,7 +136,8 @@ void main_menu(t_user_profile profile){
     scanf("%d", &choice);
 }
 
-void initial_screen(){
+void initial_screen()
+{
 
     int choice;
 
@@ -94,7 +150,6 @@ void initial_screen(){
             login_page();
             break;
         case 2:
-            register_page();
             break;
         default:
             initial_screen();

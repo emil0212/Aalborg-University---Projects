@@ -116,17 +116,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named P1_Prototype
+# Target rules for targets named Emils
 
 # Build rule for target.
-P1_Prototype: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 P1_Prototype
-.PHONY : P1_Prototype
+Emils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Emils
+.PHONY : Emils
 
 # fast build rule for target.
-P1_Prototype/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/build
-.PHONY : P1_Prototype/fast
+Emils/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/build
+.PHONY : Emils/fast
 
 #=============================================================================
 # Target rules for targets named Mathias
@@ -141,12 +141,25 @@ Mathias/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias.dir\build.make CMakeFiles/Mathias.dir/build
 .PHONY : Mathias/fast
 
+#=============================================================================
+# Target rules for targets named Mathias2
+
+# Build rule for target.
+Mathias2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mathias2
+.PHONY : Mathias2
+
+# fast build rule for target.
+Mathias2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/build
+.PHONY : Mathias2/fast
+
 Emils_Prototype/main.obj: Emils_Prototype/main.c.obj
 .PHONY : Emils_Prototype/main.obj
 
 # target to build an object file
 Emils_Prototype/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/main.c.obj
 .PHONY : Emils_Prototype/main.c.obj
 
 Emils_Prototype/main.i: Emils_Prototype/main.c.i
@@ -154,7 +167,7 @@ Emils_Prototype/main.i: Emils_Prototype/main.c.i
 
 # target to preprocess a source file
 Emils_Prototype/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/main.c.i
 .PHONY : Emils_Prototype/main.c.i
 
 Emils_Prototype/main.s: Emils_Prototype/main.c.s
@@ -162,15 +175,39 @@ Emils_Prototype/main.s: Emils_Prototype/main.c.s
 
 # target to generate assembly for a file
 Emils_Prototype/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/main.c.s
 .PHONY : Emils_Prototype/main.c.s
+
+Emils_Prototype/memory.obj: Emils_Prototype/memory.c.obj
+.PHONY : Emils_Prototype/memory.obj
+
+# target to build an object file
+Emils_Prototype/memory.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/memory.c.obj
+.PHONY : Emils_Prototype/memory.c.obj
+
+Emils_Prototype/memory.i: Emils_Prototype/memory.c.i
+.PHONY : Emils_Prototype/memory.i
+
+# target to preprocess a source file
+Emils_Prototype/memory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/memory.c.i
+.PHONY : Emils_Prototype/memory.c.i
+
+Emils_Prototype/memory.s: Emils_Prototype/memory.c.s
+.PHONY : Emils_Prototype/memory.s
+
+# target to generate assembly for a file
+Emils_Prototype/memory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/memory.c.s
+.PHONY : Emils_Prototype/memory.c.s
 
 Emils_Prototype/menu.obj: Emils_Prototype/menu.c.obj
 .PHONY : Emils_Prototype/menu.obj
 
 # target to build an object file
 Emils_Prototype/menu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/menu.c.obj
 .PHONY : Emils_Prototype/menu.c.obj
 
 Emils_Prototype/menu.i: Emils_Prototype/menu.c.i
@@ -178,7 +215,7 @@ Emils_Prototype/menu.i: Emils_Prototype/menu.c.i
 
 # target to preprocess a source file
 Emils_Prototype/menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/menu.c.i
 .PHONY : Emils_Prototype/menu.c.i
 
 Emils_Prototype/menu.s: Emils_Prototype/menu.c.s
@@ -186,7 +223,7 @@ Emils_Prototype/menu.s: Emils_Prototype/menu.c.s
 
 # target to generate assembly for a file
 Emils_Prototype/menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/menu.c.s
 .PHONY : Emils_Prototype/menu.c.s
 
 Emils_Prototype/settings.obj: Emils_Prototype/settings.c.obj
@@ -194,7 +231,7 @@ Emils_Prototype/settings.obj: Emils_Prototype/settings.c.obj
 
 # target to build an object file
 Emils_Prototype/settings.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/settings.c.obj
 .PHONY : Emils_Prototype/settings.c.obj
 
 Emils_Prototype/settings.i: Emils_Prototype/settings.c.i
@@ -202,7 +239,7 @@ Emils_Prototype/settings.i: Emils_Prototype/settings.c.i
 
 # target to preprocess a source file
 Emils_Prototype/settings.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/settings.c.i
 .PHONY : Emils_Prototype/settings.c.i
 
 Emils_Prototype/settings.s: Emils_Prototype/settings.c.s
@@ -210,7 +247,7 @@ Emils_Prototype/settings.s: Emils_Prototype/settings.c.s
 
 # target to generate assembly for a file
 Emils_Prototype/settings.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/settings.c.s
 .PHONY : Emils_Prototype/settings.c.s
 
 Emils_Prototype/utilities.obj: Emils_Prototype/utilities.c.obj
@@ -218,7 +255,7 @@ Emils_Prototype/utilities.obj: Emils_Prototype/utilities.c.obj
 
 # target to build an object file
 Emils_Prototype/utilities.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/utilities.c.obj
 .PHONY : Emils_Prototype/utilities.c.obj
 
 Emils_Prototype/utilities.i: Emils_Prototype/utilities.c.i
@@ -226,7 +263,7 @@ Emils_Prototype/utilities.i: Emils_Prototype/utilities.c.i
 
 # target to preprocess a source file
 Emils_Prototype/utilities.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/utilities.c.i
 .PHONY : Emils_Prototype/utilities.c.i
 
 Emils_Prototype/utilities.s: Emils_Prototype/utilities.c.s
@@ -234,7 +271,7 @@ Emils_Prototype/utilities.s: Emils_Prototype/utilities.c.s
 
 # target to generate assembly for a file
 Emils_Prototype/utilities.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\P1_Prototype.dir\build.make CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Emils.dir\build.make CMakeFiles/Emils.dir/Emils_Prototype/utilities.c.s
 .PHONY : Emils_Prototype/utilities.c.s
 
 Mathiases_Prototype/distance.obj: Mathiases_Prototype/distance.c.obj
@@ -333,6 +370,102 @@ Mathiases_Prototype/run_time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias.dir\build.make CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.s
 .PHONY : Mathiases_Prototype/run_time.c.s
 
+Mathiases_Prototype2/distance.obj: Mathiases_Prototype2/distance.c.obj
+.PHONY : Mathiases_Prototype2/distance.obj
+
+# target to build an object file
+Mathiases_Prototype2/distance.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.obj
+.PHONY : Mathiases_Prototype2/distance.c.obj
+
+Mathiases_Prototype2/distance.i: Mathiases_Prototype2/distance.c.i
+.PHONY : Mathiases_Prototype2/distance.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/distance.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.i
+.PHONY : Mathiases_Prototype2/distance.c.i
+
+Mathiases_Prototype2/distance.s: Mathiases_Prototype2/distance.c.s
+.PHONY : Mathiases_Prototype2/distance.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/distance.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.s
+.PHONY : Mathiases_Prototype2/distance.c.s
+
+Mathiases_Prototype2/file_management.obj: Mathiases_Prototype2/file_management.c.obj
+.PHONY : Mathiases_Prototype2/file_management.obj
+
+# target to build an object file
+Mathiases_Prototype2/file_management.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.obj
+.PHONY : Mathiases_Prototype2/file_management.c.obj
+
+Mathiases_Prototype2/file_management.i: Mathiases_Prototype2/file_management.c.i
+.PHONY : Mathiases_Prototype2/file_management.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/file_management.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.i
+.PHONY : Mathiases_Prototype2/file_management.c.i
+
+Mathiases_Prototype2/file_management.s: Mathiases_Prototype2/file_management.c.s
+.PHONY : Mathiases_Prototype2/file_management.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/file_management.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.s
+.PHONY : Mathiases_Prototype2/file_management.c.s
+
+Mathiases_Prototype2/main.obj: Mathiases_Prototype2/main.c.obj
+.PHONY : Mathiases_Prototype2/main.obj
+
+# target to build an object file
+Mathiases_Prototype2/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.obj
+.PHONY : Mathiases_Prototype2/main.c.obj
+
+Mathiases_Prototype2/main.i: Mathiases_Prototype2/main.c.i
+.PHONY : Mathiases_Prototype2/main.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.i
+.PHONY : Mathiases_Prototype2/main.c.i
+
+Mathiases_Prototype2/main.s: Mathiases_Prototype2/main.c.s
+.PHONY : Mathiases_Prototype2/main.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.s
+.PHONY : Mathiases_Prototype2/main.c.s
+
+Mathiases_Prototype2/run_time.obj: Mathiases_Prototype2/run_time.c.obj
+.PHONY : Mathiases_Prototype2/run_time.obj
+
+# target to build an object file
+Mathiases_Prototype2/run_time.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.obj
+.PHONY : Mathiases_Prototype2/run_time.c.obj
+
+Mathiases_Prototype2/run_time.i: Mathiases_Prototype2/run_time.c.i
+.PHONY : Mathiases_Prototype2/run_time.i
+
+# target to preprocess a source file
+Mathiases_Prototype2/run_time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.i
+.PHONY : Mathiases_Prototype2/run_time.c.i
+
+Mathiases_Prototype2/run_time.s: Mathiases_Prototype2/run_time.c.s
+.PHONY : Mathiases_Prototype2/run_time.s
+
+# target to generate assembly for a file
+Mathiases_Prototype2/run_time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mathias2.dir\build.make CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.s
+.PHONY : Mathiases_Prototype2/run_time.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -341,11 +474,15 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Emils
 	@echo ... Mathias
-	@echo ... P1_Prototype
+	@echo ... Mathias2
 	@echo ... Emils_Prototype/main.obj
 	@echo ... Emils_Prototype/main.i
 	@echo ... Emils_Prototype/main.s
+	@echo ... Emils_Prototype/memory.obj
+	@echo ... Emils_Prototype/memory.i
+	@echo ... Emils_Prototype/memory.s
 	@echo ... Emils_Prototype/menu.obj
 	@echo ... Emils_Prototype/menu.i
 	@echo ... Emils_Prototype/menu.s
@@ -367,6 +504,18 @@ help:
 	@echo ... Mathiases_Prototype/run_time.obj
 	@echo ... Mathiases_Prototype/run_time.i
 	@echo ... Mathiases_Prototype/run_time.s
+	@echo ... Mathiases_Prototype2/distance.obj
+	@echo ... Mathiases_Prototype2/distance.i
+	@echo ... Mathiases_Prototype2/distance.s
+	@echo ... Mathiases_Prototype2/file_management.obj
+	@echo ... Mathiases_Prototype2/file_management.i
+	@echo ... Mathiases_Prototype2/file_management.s
+	@echo ... Mathiases_Prototype2/main.obj
+	@echo ... Mathiases_Prototype2/main.i
+	@echo ... Mathiases_Prototype2/main.s
+	@echo ... Mathiases_Prototype2/run_time.obj
+	@echo ... Mathiases_Prototype2/run_time.i
+	@echo ... Mathiases_Prototype2/run_time.s
 .PHONY : help
 
 

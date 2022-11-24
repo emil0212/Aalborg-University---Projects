@@ -3,5 +3,3 @@
 
 #endif //P1_PROTOTYPE_UTILITIES_H
 
-void red();
-void green();

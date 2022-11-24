@@ -56,6 +56,4 @@ static char *product_names[] ={"Sushi", "Snow Peas", "Condensed milk", "Raspberr
                                "Canola oil", "Amaretto", "Blueberries", "Powdered sugar", "Coffee"};
 static char *transport_names[] = {"On foot", "Bike", "Car"};
 
-
-
 void run_time();

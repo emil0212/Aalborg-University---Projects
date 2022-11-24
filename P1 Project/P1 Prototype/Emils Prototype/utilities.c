@@ -1,12 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 #include "utilities.h"
 
-void red(){
-    printf("\033[1;31m");
-}
+int size_of_file(FILE *file){
+    int size = 0;
 
-void gren(){
-    printf("\033[0;32m");
+    if (file == NULL){
+        perror("Unable to open file");
+        exit(EXIT_FAILURE);
+    }
+
+    while (!feof(file)){
+
+    }
+
 }

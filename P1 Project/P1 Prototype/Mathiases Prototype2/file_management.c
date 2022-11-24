@@ -11,7 +11,8 @@ store_t * open_stores(userdata session) {
         sprintf(filename1, "%d_info.txt", k);
         myFile1 = fopen(filename1, "r");
         arrayOfStores[k] = collect_store_info(myFile1);
-        arrayOfStores[k].distance = distance(session.location_x, session.location_y, arrayOfStores[k].x_coordinates, arrayOfStores[k].y_coordinates);
+        arrayOfStores[k].distance = distance(session.location_x, session.location_y,
+                                             arrayOfStores[k].x_coordinates, arrayOfStores[k].y_coordinates);
         fclose(myFile1);
     }
 
