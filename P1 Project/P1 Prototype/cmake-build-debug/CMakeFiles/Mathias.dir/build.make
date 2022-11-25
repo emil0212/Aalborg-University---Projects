@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype"
+CMAKE_SOURCE_DIR = "K:\Aalborg-University---Projects\P1 Project\P1 Prototype"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug"
+CMAKE_BINARY_DIR = "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Mathias.dir/depend.make
@@ -71,58 +71,58 @@ include CMakeFiles/Mathias.dir/flags.make
 CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj: CMakeFiles/Mathias.dir/flags.make
 CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj: ../Mathiases\ Prototype/main.c
 CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj: CMakeFiles/Mathias.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\main.c"
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\main.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\main.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.i
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\main.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\main.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\main.c.s
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj: CMakeFiles/Mathias.dir/flags.make
 CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj: ../Mathiases\ Prototype/file_management.c
 CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj: CMakeFiles/Mathias.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\file_management.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\file_management.c"
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\file_management.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\file_management.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.i
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\file_management.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\file_management.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\file_management.c.s
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj: CMakeFiles/Mathias.dir/flags.make
 CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj: ../Mathiases\ Prototype/distance.c
 CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj: CMakeFiles/Mathias.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\distance.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\distance.c"
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\distance.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\distance.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.i
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\distance.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\distance.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\distance.c.s
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj: CMakeFiles/Mathias.dir/flags.make
 CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj: ../Mathiases\ Prototype/run_time.c
 CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj: CMakeFiles/Mathias.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\run_time.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.obj -MF CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.obj.d -o CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\run_time.c"
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\run_time.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\run_time.c" > CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.i
 
 CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\run_time.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Mathiases Prototype\run_time.c" -o CMakeFiles\Mathias.dir\Mathiases_Prototype\run_time.c.s
 
 # Object files for target Mathias
 Mathias_OBJECTS = \
@@ -142,7 +142,7 @@ Mathias.exe: CMakeFiles/Mathias.dir/build.make
 Mathias.exe: CMakeFiles/Mathias.dir/linklibs.rsp
 Mathias.exe: CMakeFiles/Mathias.dir/objects1.rsp
 Mathias.exe: CMakeFiles/Mathias.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Mathias.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Mathias.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Mathias.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/Mathias.dir/clean:
 .PHONY : CMakeFiles/Mathias.dir/clean
 
 CMakeFiles/Mathias.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles\Mathias.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles\Mathias.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Mathias.dir/depend
 

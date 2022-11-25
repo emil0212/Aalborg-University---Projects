@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype"
+CMAKE_SOURCE_DIR = "K:\Aalborg-University---Projects\P1 Project\P1 Prototype"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug"
+CMAKE_BINARY_DIR = "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/P1_Prototype.dir/depend.make
@@ -71,58 +71,58 @@ include CMakeFiles/P1_Prototype.dir/flags.make
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj: CMakeFiles/P1_Prototype.dir/flags.make
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj: ../Emils\ Prototype/main.c
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj: CMakeFiles/P1_Prototype.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\main.c"
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\main.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\main.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.i
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/P1_Prototype.dir/Emils_Prototype/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\main.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\main.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\main.c.s
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj: CMakeFiles/P1_Prototype.dir/flags.make
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj: ../Emils\ Prototype/menu.c
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj: CMakeFiles/P1_Prototype.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\menu.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\menu.c"
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\menu.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\menu.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.i
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/P1_Prototype.dir/Emils_Prototype/menu.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\menu.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\menu.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\menu.c.s
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj: CMakeFiles/P1_Prototype.dir/flags.make
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj: ../Emils\ Prototype/settings.c
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj: CMakeFiles/P1_Prototype.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\settings.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\settings.c"
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\settings.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\settings.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.i
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/P1_Prototype.dir/Emils_Prototype/settings.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\settings.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\settings.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\settings.c.s
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj: CMakeFiles/P1_Prototype.dir/flags.make
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj: ../Emils\ Prototype/utilities.c
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj: CMakeFiles/P1_Prototype.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.obj -c "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\utilities.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.obj -MF CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.obj.d -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.obj -c "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\utilities.c"
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\utilities.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\utilities.c" > CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.i
 
 CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/P1_Prototype.dir/Emils_Prototype/utilities.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\utilities.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\Emils Prototype\utilities.c" -o CMakeFiles\P1_Prototype.dir\Emils_Prototype\utilities.c.s
 
 # Object files for target P1_Prototype
 P1_Prototype_OBJECTS = \
@@ -142,7 +142,7 @@ P1_Prototype.exe: CMakeFiles/P1_Prototype.dir/build.make
 P1_Prototype.exe: CMakeFiles/P1_Prototype.dir/linklibs.rsp
 P1_Prototype.exe: CMakeFiles/P1_Prototype.dir/objects1.rsp
 P1_Prototype.exe: CMakeFiles/P1_Prototype.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable P1_Prototype.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable P1_Prototype.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\P1_Prototype.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/P1_Prototype.dir/clean:
 .PHONY : CMakeFiles/P1_Prototype.dir/clean
 
 CMakeFiles/P1_Prototype.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "C:\Users\redfa\CLionProjects\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles\P1_Prototype.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug" "K:\Aalborg-University---Projects\P1 Project\P1 Prototype\cmake-build-debug\CMakeFiles\P1_Prototype.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/P1_Prototype.dir/depend
 
