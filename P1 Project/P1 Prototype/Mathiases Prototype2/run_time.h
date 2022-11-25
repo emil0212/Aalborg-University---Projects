@@ -14,3 +14,8 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[]);
 userdata create_user();
 void bsortDesc(store_t stores[], int s);
 void sumOfProducts(groceries_list list[], store_t store[]);
+int findSaleProducts(groceries_list list[], int store, int item);
+void setOnSale(groceries_list list[]);
+int random();
+int random2();
+int checkShoppingList(groceries_list list[], int store, int item, int list_item);

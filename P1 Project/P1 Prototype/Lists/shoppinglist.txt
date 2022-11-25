@@ -1,4 +1,3 @@
-Sushi
 Raspberries
 Radishes
 Catfish
@@ -8,3 +7,12 @@ Chocolate
 Bacon
 Turnips
 Pasta
+Lettuce
+Cabbage
+Sauerkraut
+Tea
+Cantaloupes
+Cream
+Crickpeas
+Mussels
+Thyme

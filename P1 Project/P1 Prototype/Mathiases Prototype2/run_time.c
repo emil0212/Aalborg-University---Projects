@@ -3,7 +3,7 @@
 
 //The function run time uses all the different functions and holds all the data
 void run_time() {
-
+    srand(time(NULL));
     //Getting all user data
     userdata user = create_user();
 
@@ -19,6 +19,7 @@ void run_time() {
 
     sumOfProducts(ptrToAllStoreGroceries, ptrToAllStoreList);
     bsortDesc(ptrToAllStoreList, MAX_STORES);
+    setOnSale(ptrToAllStoreGroceries);
 
     print(ptrToAllStoreGroceries, user, ptrToAllStoreList);
 }
@@ -36,6 +37,50 @@ void sumOfProducts(groceries_list list[], store_t store[]) {
             }
         }
         store[i].sum = sum;
+    }
+}
+
+void setOnSale(groceries_list list[]) {
+    for (int i = 0; i < MAX_STORES; i++) {
+        for (int k = 0; k < MAX; k++) {
+            list[i].onSale[k] = random2();
+        }
+    }
+}
+
+/* Return 0 and 1 with 75% and 25% probability, respectively, using the specified function and bitwise AND operator */
+int random2() {
+    int x = random();
+    int y = random();
+
+    return (x & y);
+}
+
+int random()
+{
+    // `rand()` produces a random number
+    int random = rand();
+
+    // if the random number is even, return 0; otherwise, return 1
+    return (random % 2);
+}
+
+int checkShoppingList(groceries_list list[], int store, int item, int list_item) {
+    if (findSaleProducts(list, store, item)) {
+        if (strcmp(userproducts[list_item], list[store].name[item]) == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+int findSaleProducts(groceries_list list[], int store, int item) {
+    if (list[store].onSale[item]) {
+        return 1;
+    }
+    else {
+        return 0;
     }
 }
 
@@ -69,11 +114,19 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
     for (int i = 0; i < user.amount; i++) {
         printf("\n%s", userproducts[i]);
     }
+int j;
 
     printf("\n\nStores found within %lf km from your location:", user.distance);
     for (int i = 0; i < MAX_STORES; i++) {
         if (new_stores[i].distance <= user.distance) {
+            j = 0;
             printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
+            for (int k = 0; k < MAX; k++) {
+                if (checkShoppingList(grocery_list, i, k, j)) {
+                    printf("\n%s is on sale for %lf DKK!", grocery_list[i].name[k], grocery_list[i].cost[k]);
+                    j++;
+                }
+            }
         }
     }
 }
