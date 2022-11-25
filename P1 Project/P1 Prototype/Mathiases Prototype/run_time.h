@@ -7,7 +7,7 @@
 #include "distance.h"
 #include "file_management.h"
 
-char userproducts[100][15];
+char user_groceries[100][15];
 
 int create_shoppinglist(FILE *list);
 store_t * eliminate_stores(userdata user, store_t store_list[], int num);

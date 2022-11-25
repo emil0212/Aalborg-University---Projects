@@ -6,7 +6,7 @@
 #include "settings.h"
 #include <stdbool.h>
 
-typedef enum transport_options{Walk, Bycicle, Car, Bus}e_transport;
+typedef enum transport_options{Walk, Bicycle, Car, Bus}e_transport;
 
 typedef struct shopping_list_struct{
     int         id;
