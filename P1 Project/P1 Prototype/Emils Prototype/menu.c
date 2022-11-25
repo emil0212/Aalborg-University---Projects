@@ -2,22 +2,24 @@
 #include <time.h>
 #include <stdbool.h>
 #include <string.h>
-#include <malloc.h>
+#include <malloc/malloc.h>
+#include <stdlib.h>
 
 #include "menu.h"
 #include "memory.h"
 
-#define MAX_ARR 255
+#define     MAX_ARR      255
+#define     MAX_NAME     30
 
 const char* string_from_enum_transport(e_transport eTransport)
 {
-    const char *strings[] = {"Walk", "Bycicle", "Car", "Bus"};
+    const char *strings[] = {"Walk", "Bicycle", "Car", "Bus"};
     return strings[eTransport];
 }
 
-int file_size(FILE * file, char * file_name){
+int file_size(FILE * file, char file_name[MAX_NAME]){
     int count = 0;
-    char i;
+    int i;
     file = fopen(file_name, "r");
 
     if (file == NULL){
@@ -31,15 +33,18 @@ int file_size(FILE * file, char * file_name){
 
     fclose(file);
 
+    printf("size of file: %d\n", count);
     return count;
 }
 
-t_user_profile * load_user_profiles(FILE * file)
+t_user_profile * load_user_profiles()
 {
-    char            *file_name      = "Userprofiles.txt";
-    //file                            = fopen(file_name, "r");
-    int             l_file_size     = file_size(file, file_name);
-    t_user_profile *user_profile    = malloc(100000 * sizeof(*user_profile));
+    FILE * file;
+    char file_name[MAX_NAME]        = "Userprofiles.txt";
+    file                            = fopen(file_name, "w");
+    int l_file_size                 = file_size(file, file_name);
+
+    t_user_profile * user_profile   = malloc(l_file_size * sizeof(*user_profile));
 
     if (file == NULL){
         perror("Unable to open file");
@@ -47,17 +52,17 @@ t_user_profile * load_user_profiles(FILE * file)
     }
 
     for (int i = 0; i < l_file_size; i++){
-        fscanf(file, " %s",  user_profile[i].name);
-        fscanf(file, " %s",  user_profile[i].address);
-        fscanf(file, " %s",  user_profile[i].username);
-        fscanf(file, " %s",  user_profile[i].password);
+        fscanf(file, "%s",  user_profile[i].name);
+        fscanf(file, "%s",  user_profile[i].address);
+        fscanf(file, "%s",  user_profile[i].username);
+        fscanf(file, "%s",  user_profile[i].password);
 
-        fscanf(file, " %lf", &user_profile[i].longitude);
-        fscanf(file, " %lf", &user_profile[i].latitude);
-        fscanf(file, " %lf", &user_profile[i].max_distance);
+        fscanf(file, "%lf", &user_profile[i].longitude);
+        fscanf(file, "%lf", &user_profile[i].latitude);
+        fscanf(file, "%lf", &user_profile[i].max_distance);
 
-        fscanf(file, " %d",  &user_profile[i].age);
-        fscanf(file, " %u",  &user_profile[i].transport);
+        fscanf(file, "%d",  &user_profile[i].age);
+        fscanf(file, "%u",  &user_profile[i].transport); //convert to string
     }
 
     fclose(file);
@@ -74,6 +79,8 @@ t_user_profile create_user_profile(char* name, char* address, char* username, ch
     new_profile.address = address;
     new_profile.username = username;
     new_profile.password = password;
+    new_profile.longitude = longitude;
+    new_profile.latitude = latitude;
     new_profile.max_distance = max_distance;
     new_profile.age = age;
     new_profile.transport = transport;
@@ -91,8 +98,8 @@ bool check_login_operation(char * temp_username, char * temp_password, t_user_pr
 
 void login_page()
 {
-    char temp_username[30];
-    char temp_password[30];
+    char temp_username[MAX_NAME];
+    char temp_password[MAX_NAME];
 
     printf("Please enter your username> \n");
     scanf("%s", temp_username);
@@ -100,11 +107,7 @@ void login_page()
     printf("Please enter your password> \n");
     scanf("%s", temp_password);
 
-    FILE * file;
-    char * filename = "Userprofiles.txt";
-    file = fopen(filename, "r");
-
-    t_user_profile *profiles_in_database = load_user_profiles(file);
+    t_user_profile *profiles_in_database = load_user_profiles();
 
     printf("Username & Password> %s, %s\n", profiles_in_database[0].username, profiles_in_database[0].password);
 

@@ -38,96 +38,157 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target P1_Prototype
+# Object build statements for EXECUTABLE target Emils
 
 
 #############################################
-# Order-only phony target for P1_Prototype
+# Order-only phony target for Emils
 
-build cmake_object_order_depends_target_P1_Prototype: phony || CMakeFiles/P1_Prototype.dir
+build cmake_object_order_depends_target_Emils: phony || CMakeFiles/Emils.dir
 
-build CMakeFiles/P1_Prototype.dir/main.c.o: C_COMPILER__P1_Prototype_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/main.c || cmake_object_order_depends_target_P1_Prototype
-  DEP_FILE = CMakeFiles/P1_Prototype.dir/main.c.o.d
+build CMakeFiles/Emils.dir/Emils_Prototype/main.c.o: C_COMPILER__Emils_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Emils$ Prototype/main.c || cmake_object_order_depends_target_Emils
+  DEP_FILE = CMakeFiles/Emils.dir/Emils_Prototype/main.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
-  OBJECT_DIR = CMakeFiles/P1_Prototype.dir
-  OBJECT_FILE_DIR = CMakeFiles/P1_Prototype.dir
-  TARGET_COMPILE_PDB = CMakeFiles/P1_Prototype.dir/
-  TARGET_PDB = P1_Prototype.pdb
+  OBJECT_DIR = CMakeFiles/Emils.dir
+  OBJECT_FILE_DIR = CMakeFiles/Emils.dir/Emils_Prototype
 
-build CMakeFiles/P1_Prototype.dir/menu.c.o: C_COMPILER__P1_Prototype_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/menu.c || cmake_object_order_depends_target_P1_Prototype
-  DEP_FILE = CMakeFiles/P1_Prototype.dir/menu.c.o.d
+build CMakeFiles/Emils.dir/Emils_Prototype/menu.c.o: C_COMPILER__Emils_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Emils$ Prototype/menu.c || cmake_object_order_depends_target_Emils
+  DEP_FILE = CMakeFiles/Emils.dir/Emils_Prototype/menu.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
-  OBJECT_DIR = CMakeFiles/P1_Prototype.dir
-  OBJECT_FILE_DIR = CMakeFiles/P1_Prototype.dir
-  TARGET_COMPILE_PDB = CMakeFiles/P1_Prototype.dir/
-  TARGET_PDB = P1_Prototype.pdb
+  OBJECT_DIR = CMakeFiles/Emils.dir
+  OBJECT_FILE_DIR = CMakeFiles/Emils.dir/Emils_Prototype
 
-build CMakeFiles/P1_Prototype.dir/settings.c.o: C_COMPILER__P1_Prototype_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/settings.c || cmake_object_order_depends_target_P1_Prototype
-  DEP_FILE = CMakeFiles/P1_Prototype.dir/settings.c.o.d
+build CMakeFiles/Emils.dir/Emils_Prototype/settings.c.o: C_COMPILER__Emils_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Emils$ Prototype/settings.c || cmake_object_order_depends_target_Emils
+  DEP_FILE = CMakeFiles/Emils.dir/Emils_Prototype/settings.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
-  OBJECT_DIR = CMakeFiles/P1_Prototype.dir
-  OBJECT_FILE_DIR = CMakeFiles/P1_Prototype.dir
-  TARGET_COMPILE_PDB = CMakeFiles/P1_Prototype.dir/
-  TARGET_PDB = P1_Prototype.pdb
+  OBJECT_DIR = CMakeFiles/Emils.dir
+  OBJECT_FILE_DIR = CMakeFiles/Emils.dir/Emils_Prototype
 
-build CMakeFiles/P1_Prototype.dir/utilities.c.o: C_COMPILER__P1_Prototype_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/utilities.c || cmake_object_order_depends_target_P1_Prototype
-  DEP_FILE = CMakeFiles/P1_Prototype.dir/utilities.c.o.d
+build CMakeFiles/Emils.dir/Emils_Prototype/utilities.c.o: C_COMPILER__Emils_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Emils$ Prototype/utilities.c || cmake_object_order_depends_target_Emils
+  DEP_FILE = CMakeFiles/Emils.dir/Emils_Prototype/utilities.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
-  OBJECT_DIR = CMakeFiles/P1_Prototype.dir
-  OBJECT_FILE_DIR = CMakeFiles/P1_Prototype.dir
-  TARGET_COMPILE_PDB = CMakeFiles/P1_Prototype.dir/
-  TARGET_PDB = P1_Prototype.pdb
+  OBJECT_DIR = CMakeFiles/Emils.dir
+  OBJECT_FILE_DIR = CMakeFiles/Emils.dir/Emils_Prototype
+
+build CMakeFiles/Emils.dir/Emils_Prototype/memory.c.o: C_COMPILER__Emils_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Emils$ Prototype/memory.c || cmake_object_order_depends_target_Emils
+  DEP_FILE = CMakeFiles/Emils.dir/Emils_Prototype/memory.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Emils.dir
+  OBJECT_FILE_DIR = CMakeFiles/Emils.dir/Emils_Prototype
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target P1_Prototype
+# Link build statements for EXECUTABLE target Emils
 
 
 #############################################
-# Link the executable P1_Prototype
+# Link the executable Emils
 
-build P1_Prototype: C_EXECUTABLE_LINKER__P1_Prototype_Debug CMakeFiles/P1_Prototype.dir/main.c.o CMakeFiles/P1_Prototype.dir/menu.c.o CMakeFiles/P1_Prototype.dir/settings.c.o CMakeFiles/P1_Prototype.dir/utilities.c.o
+build Emils: C_EXECUTABLE_LINKER__Emils_Debug CMakeFiles/Emils.dir/Emils_Prototype/main.c.o CMakeFiles/Emils.dir/Emils_Prototype/menu.c.o CMakeFiles/Emils.dir/Emils_Prototype/settings.c.o CMakeFiles/Emils.dir/Emils_Prototype/utilities.c.o CMakeFiles/Emils.dir/Emils_Prototype/memory.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
-  OBJECT_DIR = CMakeFiles/P1_Prototype.dir
+  OBJECT_DIR = CMakeFiles/Emils.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/P1_Prototype.dir/
-  TARGET_FILE = P1_Prototype
-  TARGET_PDB = P1_Prototype.pdb
+  TARGET_FILE = Emils
+  TARGET_PDB = Emils.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target load_user
+# Object build statements for EXECUTABLE target Mathias
 
 
 #############################################
-# Order-only phony target for load_user
+# Order-only phony target for Mathias
 
-build cmake_object_order_depends_target_load_user: phony || CMakeFiles/load_user.dir
+build cmake_object_order_depends_target_Mathias: phony || CMakeFiles/Mathias.dir
 
-build CMakeFiles/load_user.dir/load_user.c.o: C_COMPILER__load_user_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/load_user.c || cmake_object_order_depends_target_load_user
-  DEP_FILE = CMakeFiles/load_user.dir/load_user.c.o.d
+build CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.o: C_COMPILER__Mathias_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype/main.c || cmake_object_order_depends_target_Mathias
+  DEP_FILE = CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
-  OBJECT_DIR = CMakeFiles/load_user.dir
-  OBJECT_FILE_DIR = CMakeFiles/load_user.dir
-  TARGET_COMPILE_PDB = CMakeFiles/load_user.dir/
-  TARGET_PDB = load_user.pdb
+  OBJECT_DIR = CMakeFiles/Mathias.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias.dir/Mathiases_Prototype
+
+build CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.o: C_COMPILER__Mathias_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype/file_management.c || cmake_object_order_depends_target_Mathias
+  DEP_FILE = CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias.dir/Mathiases_Prototype
+
+build CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.o: C_COMPILER__Mathias_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype/distance.c || cmake_object_order_depends_target_Mathias
+  DEP_FILE = CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias.dir/Mathiases_Prototype
+
+build CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.o: C_COMPILER__Mathias_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype/run_time.c || cmake_object_order_depends_target_Mathias
+  DEP_FILE = CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias.dir/Mathiases_Prototype
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target load_user
+# Link build statements for EXECUTABLE target Mathias
 
 
 #############################################
-# Link the executable load_user
+# Link the executable Mathias
 
-build load_user: C_EXECUTABLE_LINKER__load_user_Debug CMakeFiles/load_user.dir/load_user.c.o
+build Mathias: C_EXECUTABLE_LINKER__Mathias_Debug CMakeFiles/Mathias.dir/Mathiases_Prototype/main.c.o CMakeFiles/Mathias.dir/Mathiases_Prototype/file_management.c.o CMakeFiles/Mathias.dir/Mathiases_Prototype/distance.c.o CMakeFiles/Mathias.dir/Mathiases_Prototype/run_time.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
-  OBJECT_DIR = CMakeFiles/load_user.dir
+  OBJECT_DIR = CMakeFiles/Mathias.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/load_user.dir/
-  TARGET_FILE = load_user
-  TARGET_PDB = load_user.pdb
+  TARGET_FILE = Mathias
+  TARGET_PDB = Mathias.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Mathias2
+
+
+#############################################
+# Order-only phony target for Mathias2
+
+build cmake_object_order_depends_target_Mathias2: phony || CMakeFiles/Mathias2.dir
+
+build CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.o: C_COMPILER__Mathias2_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype2/main.c || cmake_object_order_depends_target_Mathias2
+  DEP_FILE = CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias2.dir/Mathiases_Prototype2
+
+build CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.o: C_COMPILER__Mathias2_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype2/file_management.c || cmake_object_order_depends_target_Mathias2
+  DEP_FILE = CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias2.dir/Mathiases_Prototype2
+
+build CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.o: C_COMPILER__Mathias2_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype2/distance.c || cmake_object_order_depends_target_Mathias2
+  DEP_FILE = CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias2.dir/Mathiases_Prototype2
+
+build CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.o: C_COMPILER__Mathias2_Debug /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1$ Project/P1$ Prototype/Mathiases$ Prototype2/run_time.c || cmake_object_order_depends_target_Mathias2
+  DEP_FILE = CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  OBJECT_DIR = CMakeFiles/Mathias2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Mathias2.dir/Mathiases_Prototype2
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Mathias2
+
+
+#############################################
+# Link the executable Mathias2
+
+build Mathias2: C_EXECUTABLE_LINKER__Mathias2_Debug CMakeFiles/Mathias2.dir/Mathiases_Prototype2/main.c.o CMakeFiles/Mathias2.dir/Mathiases_Prototype2/file_management.c.o CMakeFiles/Mathias2.dir/Mathiases_Prototype2/distance.c.o CMakeFiles/Mathias2.dir/Mathiases_Prototype2/run_time.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = CMakeFiles/Mathias2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Mathias2
+  TARGET_PDB = Mathias2.dbg
 
 
 #############################################
@@ -163,7 +224,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/emilpriv/CLionProjects/Aalborg-University---Projects/P1 Project/P1 Prototype/cmake-build-debug
 
-build all: phony P1_Prototype load_user
+build all: phony Emils Mathias Mathias2
 
 # =============================================================================
 # Built-in targets
@@ -172,14 +233,14 @@ build all: phony P1_Prototype load_user
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

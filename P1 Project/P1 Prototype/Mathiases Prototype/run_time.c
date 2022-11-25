@@ -115,7 +115,7 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[], i
            "\nYou have %d item(s) in your shopping list:", user.name, user.location_x, user.location_y, transport_names[user.mode - 1], user.distance, user.amount);
 
     for (int i = 0; i < user.amount; i++) {
-        printf("\n[%d] %s",i, userproducts[i]);
+        printf("\n[%d] %s", i, user_groceries[i]);
     }
 
 
@@ -167,7 +167,7 @@ int create_shoppinglist(FILE *list) {
         exit(EXIT_FAILURE);
     } else {
         do {
-            fscanf(list, "%s", userproducts[i]);
+            fscanf(list, "%s", user_groceries[i]);
             i++;
         }while (!feof(list));
     }
