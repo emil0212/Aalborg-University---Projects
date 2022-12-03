@@ -75,9 +75,9 @@ int experimental_randomizer(){
 void setOnSale(groceries_list list[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         for (int k = 0; k < MAX; k++) {
-            if (k == 0){
+            /*if (k == 0){
                 list[i].onSale[k] = 0;
-            }
+            }*/
 
             list[i].onSale[k] = experimental_randomizer();
             printf("%s = %d\n", list[i].name[k], list[i].onSale[k]);
