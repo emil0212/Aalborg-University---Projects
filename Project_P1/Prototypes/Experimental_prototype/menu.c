@@ -54,7 +54,7 @@ void main_menu(t_user_profile profile)
 
     printf("----------------------------------------\n");
     printf("Session started at %s\n", ctime(&current_time));
-    printf("Prototype | Welcome %s\n", profile.name);
+    printf("Prototypes | Welcome %s\n", profile.name);
     printf("1) View your profile\n");
     printf("2) View your cart\n");
     printf("3) Create a cart\n");
