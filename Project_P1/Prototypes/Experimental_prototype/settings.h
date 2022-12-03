@@ -26,7 +26,7 @@ typedef struct user_profile_struct{
     e_transport transport;
 }t_user_profile;
 
-t_user_profile * load_user_profiles();
+//t_user_profile * load_user_profiles();
 t_user_profile create_user_profile(char* name, char* address, char* username, char* password,
                                    double longitude, double latitude, double max_distance,
                                    int age, e_transport transport);

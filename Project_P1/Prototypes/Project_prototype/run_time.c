@@ -1,9 +1,9 @@
 #include "run_time.h"
-
-
+#include <unistd.h>
 
 //The function run time uses all the different functions and holds all the data
-void run_time() {
+void run_time()
+{
     srand(time(NULL));
     //Getting all user data
     userdata user = create_user();
@@ -63,10 +63,24 @@ void sumOfProducts(groceries_list list[], store_t store[]) {
     }
 }
 
+int experimental_randomizer(){
+    int x = rand() % 2;
+
+    if (x == 1)
+        return 1;
+
+    return 0;
+}
+
 void setOnSale(groceries_list list[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         for (int k = 0; k < MAX; k++) {
-            list[i].onSale[k] = random2();
+            if (k == 0){
+                list[i].onSale[k] = 0;
+            }
+
+            list[i].onSale[k] = experimental_randomizer();
+            printf("%s = %d\n", list[i].name[k], list[i].onSale[k]);
         }
     }
 }
@@ -157,14 +171,16 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
         if (new_stores[i].distance <= user.distance) {
             j = 0;
             printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
+
             for (int k = 0; k < MAX; k++) {
                 if (checkShoppingList(grocery_list, i, k, j)) {
-                    printf("\n%s is on sale for %lf DKK!", grocery_list[i].name[k], grocery_list[i].cost[k]);
+                    printf("%s is on sale for %lf DKK!\n", grocery_list[i].name[k], grocery_list[i].cost[k]);
                     j++;
                     k = 0;
                 }
             }
         }
+        printf("---------------------------------------------------------\n");
     }
 }
 
@@ -172,11 +188,11 @@ userdata create_user() {
     userdata session;
     printf("\nEnter name please: ");
     scanf(" %s", session.name);
-    printf("\nPlease enter your location in a coordinate format (latitude / longitude): ");
-    scanf(" %lf %lf", &session.location_x, &session.location_y);
+    printf("\nPlease enter your location in a coordinate format >> latitude, longitude : ");
+    scanf(" %lf, %lf", &session.location_x, &session.location_y);
     printf("\nPlease enter the number of your preferred mode of transport:\n(1) On foot\n(2) Bike\n(3) Car\n");
     scanf(" %d", &session.mode);
-    printf("\nHow far are you willing to travel %s in kilometers", transport_names[session.mode - 1]);
+    printf("\nHow far are you willing to travel %s in kilometers: ", transport_names[session.mode - 1]);
     scanf(" %lf", &session.distance);
 
     char filename[30] = "shoppinglist.txt";

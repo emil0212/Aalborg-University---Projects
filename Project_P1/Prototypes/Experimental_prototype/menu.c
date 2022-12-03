@@ -28,15 +28,6 @@ void login_page()
     printf("Please enter your password> \n");
     scanf("%s", temp_password);
 
-    /*t_user_profile *profiles_in_database = NULL;
-    load_user_profiles(profiles_in_database);
-
-    printf("Username & Password> %s, %s\n", temp_username, temp_password);
-    printf("Username & Password> %s, %s\n", profiles_in_database[0].username, profiles_in_database[0].password);
-    free(profiles_in_database);*/
-
-    //free(profiles_in_database);
-
     /*if (check_login_operation(temp_username, temp_password, database_profile) == false){
         printf("Invalid login\n");
         login_page();

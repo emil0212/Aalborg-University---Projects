@@ -11,8 +11,9 @@ const char* string_from_enum_transport(e_transport eTransport)
 }
 
 int lines_in_file(FILE * file, char *file_name){
-    int count = 0;
-    char i;
+    int count_lines = 0;
+    char chr;
+
     file = fopen(file_name, "r");
 
     if (file == NULL){
@@ -20,13 +21,20 @@ int lines_in_file(FILE * file, char *file_name){
         exit(EXIT_FAILURE);
     }
 
-    for ( i = getc(file); i != EOF; i = getc(file))
-        if (i == '\n')
-            count++;
+    chr = getc(file);
+    while (chr != EOF)
+    {
 
+        if (chr == '\n')
+        {
+            count_lines = count_lines + 1;
+        }
+
+        chr = getc(file);
+    }
     fclose(file);
 
-    return count;
+    return count_lines;
 }
 
 
