@@ -90,6 +90,8 @@ void login_page(FILE * file, char * file_name)
     char temp_username[MAX];
     char temp_password[MAX];
 
+    validate_file_pointer(file);
+
     t_user_profile * database = load_database(file, file_name);
 
     printf("Please enter your username> \n");
@@ -110,6 +112,7 @@ void login_page(FILE * file, char * file_name)
 void registration_page(FILE * file, char * file_name)
 {
     clear_screen();
+    validate_file_pointer(file);
     t_user_profile * database = load_database(file, file_name);
 
     int id = count_lines_in_file(file, file_name);
