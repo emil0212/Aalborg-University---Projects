@@ -2,62 +2,62 @@
 #include "distance.h"
 #include "file_management.h"
 
-store_t * open_stores(userdata session) {
-    char filename1[20];
-    FILE *myFile1;
-    store_t* arrayOfStores = malloc(MAX_STORES * sizeof *arrayOfStores);
+store_db * create_store_database(userdata session) {
+    char filename[20];
+    FILE *db;
+    store_db* arrayOfStoreInfo = malloc(MAX_STORES * sizeof *arrayOfStoreInfo);
 
     for (int k = 0; k < MAX_STORES; k++) {
-        sprintf(filename1, "%d_info.txt", k);
-        myFile1 = fopen(filename1, "r");
-        arrayOfStores[k] = collect_store_info(myFile1);
-        arrayOfStores[k].distance = distance(session.location_x, session.location_y,
-                                             arrayOfStores[k].x_coordinates, arrayOfStores[k].y_coordinates);
-        fclose(myFile1);
+        sprintf(filename, "%d_info.txt", k);
+        db = fopen(filename, "r");
+        arrayOfStoreInfo[k] = collect_store_info(db);
+        arrayOfStoreInfo[k].distance = distance(session.location_x, session.location_y,
+                                                arrayOfStoreInfo[k].x_coordinates, arrayOfStoreInfo[k].y_coordinates);
+        fclose(db);
     }
 
-    return arrayOfStores;
+    return arrayOfStoreInfo;
 }
 
-groceries_list * open_files() {
+groceries_db * create_price_database() {
     char filename[20];
-    FILE *myFile;
-    groceries_list* arrayOfGroceryLists = malloc(MAX_STORES * sizeof *arrayOfGroceryLists);
+    FILE *db;
+    groceries_db* arrayOfStorePrices = malloc(MAX_STORES * sizeof *arrayOfStorePrices);
 
     for (int i = 0; i < MAX_STORES; i++) {
         sprintf(filename, "%d_groceries.txt", i);
-        myFile = fopen(filename, "r");
-        arrayOfGroceryLists[i] = collect_list_of_groceries(myFile);
-        fclose(myFile);
+        db = fopen(filename, "r");
+        arrayOfStorePrices[i] = collect_list_of_groceries(db);
+        fclose(db);
     }
-    return arrayOfGroceryLists;
+    return arrayOfStorePrices;
 }
 
-groceries_list collect_list_of_groceries(FILE *fp) {
-    groceries_list groceriesList;
+groceries_db collect_list_of_groceries(FILE *db) {
+    groceries_db productList;
 
-    if (fp == NULL) {
+    if (db == NULL) {
         perror("Unable to open file");
         exit(EXIT_FAILURE);
     } else {
-        for (int i = 0; i < MAX; i++) {
-            fscanf(fp, " %lf", &groceriesList.cost[i]);
-            groceriesList.id[i] = i;
-            groceriesList.name[i] = product_names[i];
+        for (int i = 0; i < MAX_PRODUCTS; i++) {
+            fscanf(db, " %lf", &productList.cost[i]);
+            productList.id[i] = i;
+            productList.name[i] = product_names[i];
         }
     }
-    return groceriesList;
+    return productList;
 }
 
-store_t collect_store_info(FILE *fp1) {
-    store_t store_info;
+store_db collect_store_info(FILE *db) {
+    store_db storeInfo;
 
-    if (fp1 == NULL) {
+    if (db == NULL) {
         perror("Unable to open file");
         exit(EXIT_FAILURE);
     }
     else {
-        fscanf(fp1, "%s %s %lf %lf", store_info.name, store_info.address, &store_info.x_coordinates, &store_info.y_coordinates);
+        fscanf(db, "%s %s %lf %lf", storeInfo.name, storeInfo.address, &storeInfo.x_coordinates, &storeInfo.y_coordinates);
     }
-    return store_info;
+    return storeInfo;
 }

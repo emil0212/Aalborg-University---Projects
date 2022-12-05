@@ -8,15 +8,15 @@
 #include <string.h>
 #include <time.h>
 
-#define MAX 100         // Amount of products
+#define MAX_PRODUCTS 100         // Amount of products
 #define MAX_STORES 5    // Amount of stores
 
 typedef struct groceries {
-    int id[MAX];
-    double cost[MAX];
-    char *name[MAX];
-    int onSale[MAX];
-} groceries_list;
+    int id[MAX_PRODUCTS];
+    double cost[MAX_PRODUCTS];
+    char *name[MAX_PRODUCTS];
+    int onSale[MAX_PRODUCTS];
+} groceries_db;
 
 typedef struct store {
     double x_coordinates, y_coordinates;
@@ -24,7 +24,7 @@ typedef struct store {
     char address[30];
     double sum;
     double distance; //distance from user
-} store_t;
+} store_db;
 
 typedef struct userdata {
     char name[30];

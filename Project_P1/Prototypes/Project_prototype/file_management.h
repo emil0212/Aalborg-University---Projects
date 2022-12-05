@@ -4,7 +4,7 @@
 #endif //P1_PROTOTYPE_FILE_MANAGEMENT_H
 
 
-groceries_list * open_files();
-store_t * open_stores(userdata session);
-groceries_list collect_list_of_groceries (FILE *fp);
-store_t collect_store_info(FILE *fp);
+groceries_db * create_price_database();
+store_db * create_store_database(userdata session);
+groceries_db collect_list_of_groceries (FILE *db);
+store_db collect_store_info(FILE *db);

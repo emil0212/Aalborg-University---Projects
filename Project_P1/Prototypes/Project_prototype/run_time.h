@@ -9,14 +9,13 @@
 
 char user_groceries[100][15];
 
-int create_shoppinglist(FILE *list);
-void print(groceries_list grocery_list[], userdata user, store_t new_stores[]);
+int load_shoppinglist(FILE *list);
+void print(groceries_db store_prices[], userdata user, store_db store_info[]);
 userdata create_user();
-void bsortDesc(store_t stores[], int s);
-void sumOfProducts(groceries_list list[], store_t store[]);
-int findSaleProducts(groceries_list list[], int store, int item);
-void setOnSale(groceries_list list[]);
+void bsortDesc(store_db store_info[], int s);
+void sumOfProducts(groceries_db store_prices[], store_db store_info[]);
+void setOnSale(groceries_db store_prices[]);
 int random1();
 int random2();
-int checkShoppingList(groceries_list list[], int store, int item, int list_item);
-void checkForInvalidProducts(groceries_list list[], userdata user);
+void checkForInvalidProducts(groceries_db store_prices[], userdata user);
+void print_promotions(groceries_db list[], int store);

@@ -9,14 +9,14 @@ void run_time()
     userdata user = create_user();
 
     //Getting all stores
-    groceries_list *ptrToAllStoreGroceries = open_files();
+    groceries_db *ptrToAllStoreGroceries = create_price_database();
 
     checkForInvalidProducts(ptrToAllStoreGroceries, user);
 
     setOnSale(ptrToAllStoreGroceries);
 
     //Getting all groceries from each store
-    store_t *ptrToAllStoreList = open_stores(user);
+    store_db *ptrToAllStoreList = create_store_database(user);
 
     sumOfProducts(ptrToAllStoreGroceries, ptrToAllStoreList);
     bsortDesc(ptrToAllStoreList, MAX_STORES);
@@ -24,12 +24,12 @@ void run_time()
     print(ptrToAllStoreGroceries, user, ptrToAllStoreList);
 }
 
-void checkForInvalidProducts(groceries_list list[], userdata user) {
+void checkForInvalidProducts(groceries_db store_prices[], userdata user) {
     int check = 0;
     int j = 0;
 
-    for (int i = 0; i < MAX; i++) {
-        if (strcmp(user_groceries[j], list[1].name[i]) == 0) {
+    for (int i = 0; i < MAX_PRODUCTS; i++) {
+        if (strcmp(user_groceries[j], store_prices[1].name[i]) == 0) {
             i = 0;
             check += 1;
             j++;
@@ -42,27 +42,27 @@ void checkForInvalidProducts(groceries_list list[], userdata user) {
     }
 }
 
-void sumOfProducts(groceries_list list[], store_t store[]) {
+void sumOfProducts(groceries_db store_prices[], store_db store_info[]) {
     double sum;
     int j;
 
     for (int i = 0; i < MAX_STORES; i++) {
         j = 0, sum = 0;
-        for (int k = 0; k < MAX; k++) {
-            if (strcmp(user_groceries[j], list[i].name[k]) == 0) {
-                sum += list[i].cost[k];
+        for (int k = 0; k < MAX_PRODUCTS; k++) {
+            if (strcmp(user_groceries[j], store_prices[i].name[k]) == 0) {
+                sum += store_prices[i].cost[k];
                 k = 0; // Resetting the loop, so we can find products before the found one
                 j++;
             }
         }
-        store[i].sum = sum;
+        store_info[i].sum = sum;
     }
 }
 
-void setOnSale(groceries_list list[]) {
+void setOnSale(groceries_db store_prices[]) {
     for (int i = 0; i < MAX_STORES; i++) {
-        for (int k = 0; k < MAX; k++) {
-            list[i].onSale[k] = random2();
+        for (int k = 0; k < MAX_PRODUCTS; k++) {
+            store_prices[i].onSale[k] = random2();
         }
     }
 }
@@ -84,64 +84,31 @@ int random1()
     return (random % 2);
 }
 
-int checkShoppingList(groceries_list list[], int store, int item, int list_item) {
-    if (findSaleProducts(list, store, item) == 0) {
-        return 0;
-    }
-
-    if (strcmp(user_groceries[list_item], list[store].name[item]) != 0) {
-        return 0;
-    }
-    else {
-        return 1;
-    }
-}
-
-/*int checkShoppingList(groceries_list list[], int store, int item, int list_item) {
-    if (findSaleProducts(list, store, item)) {
-        if (strcmp(user_groceries[list_item], list[store].name[item]) == 0) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-}*/
-
-int findSaleProducts(groceries_list list[], int store, int item) {
-    if (list[store].onSale[item] == 1) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
-
-
-/* This function sorts all the stores after lowest price */
-void bsortDesc(store_t stores[], int s)
+/* This function sorts all the store_info after lowest price */
+void bsortDesc(store_db store_info[], int s)
 {
     int i, j;
-    store_t temp;
+    store_db temp;
 
     for (i = 0; i < s - 1; i++)
     {
         for (j = 0; j < (s - 1-i); j++)
         {
-            if (stores[j].sum > stores[j + 1].sum)
+            if (store_info[j].sum > store_info[j + 1].sum)
             {
-                temp = stores[j];
-                stores[j] = stores[j + 1];
-                stores[j + 1] = temp;
+                temp = store_info[j];
+                store_info[j] = store_info[j + 1];
+                store_info[j + 1] = temp;
             }
         }
     }
 }
 
-void print_promotions(groceries_list list[], int store) {
+void print_promotions(groceries_db list[], int store) {
     int i, j = 0;
 
 
-    for (i = 0; i < MAX; i++) {
+    for (i = 0; i < MAX_PRODUCTS; i++) {
         if (strcmp(user_groceries[j], list[store].name[i]) == 0) {
             j++;
             if (list[store].onSale[i] == 1) {
@@ -152,7 +119,7 @@ void print_promotions(groceries_list list[], int store) {
     }
 }
 
-void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
+void print(groceries_db store_prices[], userdata user, store_db store_info[]) {
     printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
@@ -164,10 +131,9 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
 
     printf("\n\nStores found within %lf km from your location:", user.distance);
     for (int i = 0; i < MAX_STORES; i++) {
-        if (new_stores[i].distance <= user.distance) {
-            printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
-
-            print_promotions(grocery_list, i);
+        if (store_info[i].distance <= user.distance) {
+            printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", store_info[i].name, store_info[i].address, store_info[i].sum, store_info[i].distance);
+            print_promotions(store_prices, i);
         }
         printf("---------------------------------------------------------\n");
     }
@@ -185,17 +151,18 @@ userdata create_user() {
     scanf(" %lf", &session.distance);
 
     char filename[30] = "shoppinglist.txt";
-    FILE *myFile;
+    FILE *shoppingList;
 
-    myFile = fopen(filename, "r");
-    session.amount = create_shoppinglist(myFile);
+    shoppingList = fopen(filename, "r");
+    session.amount = load_shoppinglist(shoppingList);
 
     return session;
 }
 
 
-int create_shoppinglist(FILE *list) {
+int load_shoppinglist(FILE *list) {
     int i = 0;
+    int k;
 
     if (list == NULL) {
         perror("Unable to open file");
@@ -205,6 +172,13 @@ int create_shoppinglist(FILE *list) {
             fscanf(list, "%s", user_groceries[i]);
             i++;
         }
+        k = i;
+
+        while (k < 100) {
+            strcpy(user_groceries[k], "0");
+            k++;
+        }
+
     }
     return i;
 }

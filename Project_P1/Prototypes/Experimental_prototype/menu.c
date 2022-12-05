@@ -6,12 +6,12 @@
 #include "menu.h"
 #include "utilities.h"
 
-#define MAX 30
+#define MAX_PRODUCTS 30
 
 void login_page()
 {
-    char temp_username[MAX];
-    char temp_password[MAX];
+    char temp_username[MAX_PRODUCTS];
+    char temp_password[MAX_PRODUCTS];
 
     printf("Please enter your username> \n");
     scanf("%s", temp_username);
