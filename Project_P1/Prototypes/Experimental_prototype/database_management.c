@@ -35,23 +35,24 @@ t_user_profile create_profile(int id)
     printf("Please enter your address> ");
     scanf("%s", new_profile.address);
 
-    printf("Select a username> ");
-    scanf("%s", new_profile.username);
-
-    printf("Select a password> ");
-    scanf("%s", new_profile.password);
-
-    new_profile.longitude = 1.1; new_profile.latitude = 1.1;
+    printf("Enter coordinates of your address (x.x, y.y)> ");
+    scanf("%lf, %lf", &new_profile.longitude, &new_profile.latitude);
 
     printf("Max distance you're willing to travel> ");
     scanf("%lf", &new_profile.max_distance);
 
-    printf("Select a transport option> ");
+    printf("Select a transport option>\n");
     for (int i = 0; i < 4; i++)
     {
         printf("[%d] %s\n", i, string_from_enum_transport(i));
     }
     scanf("%d", &new_profile.transport);
+
+    printf("Select a username> ");
+    scanf("%s", new_profile.username);
+
+    printf("Select a password> ");
+    scanf("%s", new_profile.password);
 
     return new_profile;
 }
