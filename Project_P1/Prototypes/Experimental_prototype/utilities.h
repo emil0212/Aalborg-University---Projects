@@ -3,7 +3,8 @@
 
 #endif //P1_PROTOTYPE_UTILITIES_H
 
-#include "settings.h"
+#include "database_management.h"
 
 const char* string_from_enum_transport(e_transport eTransport);
-int lines_in_file(FILE * file, char *file_name);
+int count_lines_in_file(FILE * file, char *file_name);
+void validate_file_pointer(FILE * file);

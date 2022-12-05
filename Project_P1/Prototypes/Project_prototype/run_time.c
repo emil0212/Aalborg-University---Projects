@@ -9,18 +9,14 @@ void run_time()
     userdata user = create_user();
 
     //Getting all stores
-    groceries_list all_store_groceries[MAX_STORES];
-    groceries_list *ptrToAllStoreGroceries = all_store_groceries;
-    ptrToAllStoreGroceries = open_files();
+    groceries_list *ptrToAllStoreGroceries = open_files();
 
     checkForInvalidProducts(ptrToAllStoreGroceries, user);
 
     setOnSale(ptrToAllStoreGroceries);
 
     //Getting all groceries from each store
-    store_t all_store_list[MAX_STORES];
-    store_t *ptrToAllStoreList = all_store_list;
-    ptrToAllStoreList = open_stores(user);
+    store_t *ptrToAllStoreList = open_stores(user);
 
     sumOfProducts(ptrToAllStoreGroceries, ptrToAllStoreList);
     bsortDesc(ptrToAllStoreList, MAX_STORES);
@@ -63,24 +59,10 @@ void sumOfProducts(groceries_list list[], store_t store[]) {
     }
 }
 
-int experimental_randomizer(){
-    int x = rand() % 2;
-
-    if (x == 1)
-        return 1;
-
-    return 0;
-}
-
 void setOnSale(groceries_list list[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         for (int k = 0; k < MAX; k++) {
-            /*if (k == 0){
-                list[i].onSale[k] = 0;
-            }*/
-
-            list[i].onSale[k] = experimental_randomizer();
-            printf("%s = %d\n", list[i].name[k], list[i].onSale[k]);
+            list[i].onSale[k] = random2();
         }
     }
 }
@@ -155,6 +137,21 @@ void bsortDesc(store_t stores[], int s)
     }
 }
 
+void print_promotions(groceries_list list[], int store) {
+    int i, j = 0;
+
+
+    for (i = 0; i < MAX; i++) {
+        if (strcmp(user_groceries[j], list[store].name[i]) == 0) {
+            j++;
+            if (list[store].onSale[i] == 1) {
+                printf("%s is on sale for %.2lf DKK!\n", list[store].name[i], list[store].cost[i]);
+            }
+            i = 0;
+        }
+    }
+}
+
 void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
     printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
@@ -164,21 +161,13 @@ void print(groceries_list grocery_list[], userdata user, store_t new_stores[]) {
     for (int i = 0; i < user.amount; i++) {
         printf("\n%s", user_groceries[i]);
     }
-    int j;
 
     printf("\n\nStores found within %lf km from your location:", user.distance);
     for (int i = 0; i < MAX_STORES; i++) {
         if (new_stores[i].distance <= user.distance) {
-            j = 0;
             printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", new_stores[i].name, new_stores[i].address, new_stores[i].sum, new_stores[i].distance);
 
-            for (int k = 0; k < MAX; k++) {
-                if (checkShoppingList(grocery_list, i, k, j)) {
-                    printf("%s is on sale for %lf DKK!\n", grocery_list[i].name[k], grocery_list[i].cost[k]);
-                    j++;
-                    k = 0;
-                }
-            }
+            print_promotions(grocery_list, i);
         }
         printf("---------------------------------------------------------\n");
     }

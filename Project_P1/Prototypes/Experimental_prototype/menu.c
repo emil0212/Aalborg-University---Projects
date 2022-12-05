@@ -2,38 +2,38 @@
 #include <time.h>
 #include <string.h>
 #include <stdbool.h>
-#include <stdlib.h>
 
 #include "menu.h"
-#include "settings.h"
+#include "utilities.h"
 
-#define MAX_NAME 30
-
-bool check_login_operation(char * temp_username, char * temp_password, t_user_profile profile)
-{
-    if (strcmp(profile.username, temp_username) != 0 || strcmp(profile.password, temp_password) != 0)
-        return false;
-
-    return true;
-}
+#define MAX 30
 
 void login_page()
 {
-    char temp_username[MAX_NAME];
-    char temp_password[MAX_NAME];
+    char temp_username[MAX];
+    char temp_password[MAX];
 
     printf("Please enter your username> \n");
     scanf("%s", temp_username);
 
     printf("Please enter your password> \n");
     scanf("%s", temp_password);
+}
 
-    /*if (check_login_operation(temp_username, temp_password, database_profile) == false){
-        printf("Invalid login\n");
-        login_page();
-    }*/
+void registration_page()
+{
+    FILE * file = NULL;
+    char * file_name = "Userprofiles.txt";
 
-    //main_menu(database_profile);
+    t_user_profile * database = load_database(file, file_name);
+
+    int id = count_lines_in_file(file, file_name);
+    t_user_profile new_profile = create_profile(id);
+
+    upload_profile(file, file_name, new_profile, database);
+
+    printf("Succesfully created a profile!\n\n");
+    initial_screen();
 }
 
 void main_menu(t_user_profile profile)
@@ -45,18 +45,34 @@ void main_menu(t_user_profile profile)
 
     printf("----------------------------------------\n");
     printf("Session started at %s\n", ctime(&current_time));
-    printf("Prototypes | Welcome %s\n", profile.name);
+    printf("Prototype | Welcome %s\n", profile.name);
     printf("1) View your profile\n");
     printf("2) View your cart\n");
     printf("3) Create a cart\n");
     printf("4) Search\n");
     printf("5) Logout\n");
     scanf("%d", &choice);
+
+    switch(choice){
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            printf("Session ended at %s\n", ctime(&current_time));
+            initial_screen();
+            break;
+        default:
+            main_menu(profile);
+    }
 }
 
 void initial_screen()
 {
-
     int choice;
 
     printf("1) Login\n");
@@ -68,6 +84,7 @@ void initial_screen()
             login_page();
             break;
         case 2:
+            registration_page();
             break;
         default:
             initial_screen();
