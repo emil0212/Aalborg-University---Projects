@@ -3,6 +3,11 @@
 #include <string.h>
 #include "utilities.h"
 
+#define SECONDS_PER_WEEK   (7 * 24 * (60 * 60))
+#define SECONDS_PER_DAY    (24 * (60 * 60))
+#define SECONDS_PER_HOUR   (60 * 60)
+#define SECONDS_PER_MINUTE (60)
+
 const char* string_from_enum_transport(e_transport eTransport)
 {
     const char *strings[] = {"Walk", "Bicycle", "Car", "Bus"};
@@ -36,4 +41,19 @@ int count_lines_in_file(FILE * file, char *file_name){
     fclose(file);
 
     return count_lines;
+}
+
+void session_time_calculator(int input){
+    int min, hour;
+
+    input    = input % SECONDS_PER_WEEK;
+    input    = input % SECONDS_PER_DAY;
+
+    hour     = input / SECONDS_PER_HOUR;
+    input    = input % SECONDS_PER_HOUR;
+
+    min      = input / SECONDS_PER_MINUTE;
+    input    = input % SECONDS_PER_MINUTE;
+
+    printf("Session was active for %d hours, %d minutes, %d seconds\n\n", hour, min, input);
 }

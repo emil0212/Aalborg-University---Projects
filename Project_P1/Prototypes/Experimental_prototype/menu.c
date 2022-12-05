@@ -46,7 +46,7 @@ void main_menu(t_user_profile profile)
 {
     int choice;
 
-    time_t login_time, logout_time;
+    time_t login_time, logout_time, session;
 
     time(&login_time);
 
@@ -73,7 +73,10 @@ void main_menu(t_user_profile profile)
             break;
         case 5:
             time(&logout_time);
-            printf("Session ended at %s\n", ctime(&logout_time));
+            session = logout_time - login_time;
+            printf("Previous session started at %s", ctime(&login_time));
+            printf("Previous session ended at %s", ctime(&logout_time));
+            session_time_calculator(session);
             initial_screen();
             break;
         default:

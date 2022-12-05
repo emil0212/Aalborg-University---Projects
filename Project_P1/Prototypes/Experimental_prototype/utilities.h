@@ -8,3 +8,4 @@
 const char* string_from_enum_transport(e_transport eTransport);
 int count_lines_in_file(FILE * file, char *file_name);
 void validate_file_pointer(FILE * file);
+void session_time_calculator(int input);
