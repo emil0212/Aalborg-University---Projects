@@ -26,27 +26,27 @@ t_user_profile create_profile(int id)
 
     new_profile.id = id;
 
-    printf("Please enter your name>\n ");
+    printf("\nPlease enter your name> ");
     scanf("%s", new_profile.name);
 
-    printf("Please enter your age>\n ");
+    printf("Please enter your age> ");
     scanf("%d", &new_profile.age);
 
-    printf("Please enter your address>\n ");
+    printf("Please enter your address> ");
     scanf("%s", new_profile.address);
 
-    printf("Select a username>\n ");
+    printf("Select a username> ");
     scanf("%s", new_profile.username);
 
-    printf("Select a password>\n ");
+    printf("Select a password> ");
     scanf("%s", new_profile.password);
 
     new_profile.longitude = 1.1; new_profile.latitude = 1.1;
 
-    printf("Max distance you're willing to travel>\n ");
+    printf("Max distance you're willing to travel> ");
     scanf("%lf", &new_profile.max_distance);
 
-    printf("Select a transport option>\n ");
+    printf("Select a transport option> ");
     for (int i = 0; i < 4; i++)
     {
         printf("[%d] %s\n", i, string_from_enum_transport(i));

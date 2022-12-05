@@ -10,6 +10,7 @@
 void main_menu(t_user_profile profile);
 void login_page(FILE * file, char * file_name);
 void registration_page(FILE * file, char * file_name);
+void clear_screen();
 
 void initial_screen()
 {
@@ -22,6 +23,7 @@ void initial_screen()
     printf("2) Register\n");
     printf("3) Exit\n");
     scanf("%d", &choice);
+    clear_screen();
 
     switch(choice)
     {
@@ -57,6 +59,7 @@ void main_menu(t_user_profile profile)
     printf("4) Search\n");
     printf("5) Logout\n");
     scanf("%d", &choice);
+    clear_screen();
 
     switch(choice)
     {
@@ -80,6 +83,7 @@ void main_menu(t_user_profile profile)
 
 void login_page(FILE * file, char * file_name)
 {
+    clear_screen();
     char temp_username[MAX];
     char temp_password[MAX];
 
@@ -96,12 +100,13 @@ void login_page(FILE * file, char * file_name)
         printf("Login failed, please check your credentials and try again\n");
         initial_screen();
     }
-
+    clear_screen();
     main_menu(database[id]);
 }
 
 void registration_page(FILE * file, char * file_name)
 {
+    clear_screen();
     t_user_profile * database = load_database(file, file_name);
 
     int id = count_lines_in_file(file, file_name);
@@ -111,4 +116,10 @@ void registration_page(FILE * file, char * file_name)
 
     printf("Succesfully created a profile!\n\n");
     initial_screen();
+}
+
+void clear_screen(){
+    for (int i = 0; i < 20; i++){
+        printf("\n");
+    }
 }
