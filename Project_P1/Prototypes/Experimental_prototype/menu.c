@@ -96,7 +96,7 @@ void login_page(FILE * file, char * file_name)
     scanf("%s", temp_password);
 
     int id = 0;
-    if (!validate_credentials_in_database(file, file_name, temp_username, temp_password, database, &id)){
+    if (!validate_credentials_in_database(file, file_name, temp_username, temp_password, database, &id, true)){
         printf("Login failed, please check your credentials and try again\n");
         initial_screen();
     }

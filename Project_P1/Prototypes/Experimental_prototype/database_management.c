@@ -5,14 +5,13 @@
 
 bool validate_credentials_in_database(FILE * file, char * file_name,
                                       char username[], char password[],
-                                      t_user_profile database[], int * id){
+                                      t_user_profile database[], int * id, bool IDFLAG){
 
     for (int i = 0; i < count_lines_in_file(file, file_name); i++){
         if (strcmp(database[i].username, username) == 0 &&
             strcmp(database[i].password, password) == 0){
-            if (id != 0)
+            if (IDFLAG)
                 *id = i;
-
             return true;
         }
     }
@@ -82,9 +81,7 @@ void upload_profile(FILE * file, char * file_name, t_user_profile profile, t_use
 
     validate_file_pointer(file);
 
-
-
-    if (!validate_credentials_in_database(file, file_name, profile.username, profile.password, database, 0))
+    if (!validate_credentials_in_database(file, file_name, profile.username, profile.password, database, 0, false))
         fprintf(file, "%d %s %s %s %s %lf %lf %f %d %u\n", profile.id, profile.name, profile.address, profile.username, profile.password,
             profile.longitude, profile.latitude, profile.max_distance, profile.age, profile.transport);
 
