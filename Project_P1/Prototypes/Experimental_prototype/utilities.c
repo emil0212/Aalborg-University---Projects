@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+
 #include "utilities.h"
 
 #define SECONDS_PER_WEEK   (7 * 24 * (60 * 60))
@@ -56,4 +58,29 @@ void session_time_calculator(int input){
     input    = input % SECONDS_PER_MINUTE;
 
     printf("Session was active for %d hours, %d minutes, %d seconds\n\n", hour, min, input);
+}
+
+double distance(double lat1, double lon1, double lat2, double lon2) {
+    double theta, dist;
+    if ((lat1 == lat2) && (lon1 == lon2)) {
+        return 0;
+    }
+    else {
+        theta = lon1 - lon2;
+        dist = sin(deg2rad(lat1)) * sin(deg2rad(lat2)) + cos(deg2rad(lat1)) * cos(deg2rad(lat2)) * cos(deg2rad(theta));
+        //returns the arc cosine (inverse cosine) of a number in radians.
+        dist = acos(dist);
+        dist = rad2deg(dist);
+        dist = dist * 60 * 1.1515;
+        dist = dist * 1.609344;
+    }
+    return dist;
+}
+
+double deg2rad(double deg) {
+    return (deg * PI / 180);
+}
+
+double rad2deg(double rad) {
+    return (rad * 180 / PI);
 }

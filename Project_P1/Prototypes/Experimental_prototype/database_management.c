@@ -3,15 +3,16 @@
 #include <stdlib.h>
 #include "utilities.h"
 
-bool validate_credentials_in_database(FILE * file, char * file_name,
-                                      char username[], char password[],
+bool validate_credentials_in_database(FILE * file, char * file_name, char username[], char password[],
                                       t_user_profile database[], int * id, bool IDFLAG){
 
-    for (int i = 0; i < count_lines_in_file(file, file_name); i++){
-        if (strcmp(database[i].username, username) == 0 &&
-            strcmp(database[i].password, password) == 0){
+    for (int i = 0; i < count_lines_in_file(file, file_name); i++)
+    {
+        if (strcmp(database[i].username, username) == 0 && strcmp(database[i].password, password) == 0)
+        {
             if (IDFLAG)
                 *id = i;
+
             return true;
         }
     }

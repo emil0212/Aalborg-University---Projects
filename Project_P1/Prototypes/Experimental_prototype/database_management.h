@@ -7,13 +7,6 @@
 
 typedef enum transport_options{Walk, Bicycle, Car, Bus}e_transport;
 
-typedef struct shopping_list_struct{
-    int         id;
-    char*       name;
-    int         price;
-    bool        discount;
-}t_shopping_list;
-
 typedef struct user_profile_struct{
     int         id;
     char        name[30];
