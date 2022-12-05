@@ -28,7 +28,9 @@ typedef struct user_profile_struct{
 }t_user_profile;
 
 bool check_profile_existence(FILE * file, char * file_name, t_user_profile profile, t_user_profile database[]);
-t_user_profile * load_database(FILE * file, char * file_name);
 void upload_profile(FILE * file, char * file_name, t_user_profile profile, t_user_profile database[]);
+
+t_user_profile * load_database(FILE * file, char * file_name);
 t_user_profile create_profile(int id);
+t_user_profile load_profile(FILE * file, char * file_name, int id);
 

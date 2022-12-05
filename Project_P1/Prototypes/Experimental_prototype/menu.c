@@ -6,25 +6,28 @@
 #include "menu.h"
 #include "utilities.h"
 
-#define MAX_PRODUCTS 30
+#define MAX 30
 
-void login_page()
+void login_page(FILE * file, char * file_name)
 {
-    char temp_username[MAX_PRODUCTS];
-    char temp_password[MAX_PRODUCTS];
+    char temp_username[MAX];
+    char temp_password[MAX];
+
+    t_user_profile * database = load_database(file, file_name);
 
     printf("Please enter your username> \n");
     scanf("%s", temp_username);
 
     printf("Please enter your password> \n");
     scanf("%s", temp_password);
+
+
+
+    //if (check_profile_existence(file, file_name, )
 }
 
-void registration_page()
+void registration_page(FILE * file, char * file_name)
 {
-    FILE * file = NULL;
-    char * file_name = "Userprofiles.txt";
-
     t_user_profile * database = load_database(file, file_name);
 
     int id = count_lines_in_file(file, file_name);
@@ -74,6 +77,9 @@ void main_menu(t_user_profile profile)
 void initial_screen()
 {
     int choice;
+
+    FILE * file = NULL;
+    char * file_name = "Userprofiles.txt";
 
     printf("1) Login\n");
     printf("2) Register\n");

@@ -44,6 +44,7 @@ t_user_profile create_profile(int id)
     {
         printf("[%d] %s\n", i, string_from_enum_transport(i));
     }
+
     scanf("%d", &new_profile.transport);
 
     return new_profile;
