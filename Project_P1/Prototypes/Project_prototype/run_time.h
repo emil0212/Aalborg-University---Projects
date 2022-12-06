@@ -15,7 +15,6 @@ userdata create_user();
 void bsortDesc(store_db store_info[], int s);
 void sumOfProducts(groceries_db store_prices[], store_db store_info[]);
 void setOnSale(groceries_db store_prices[]);
-int random1();
-int random2();
 void checkForInvalidProducts(groceries_db store_prices[], userdata user);
 void print_promotions(groceries_db list[], int store);
+int random_sale_decider();

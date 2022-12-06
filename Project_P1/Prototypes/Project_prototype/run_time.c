@@ -62,26 +62,20 @@ void sumOfProducts(groceries_db store_prices[], store_db store_info[]) {
 void setOnSale(groceries_db store_prices[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         for (int k = 0; k < MAX_PRODUCTS; k++) {
-            store_prices[i].onSale[k] = random2();
+            store_prices[i].onSale[k] = random_sale_decider();
         }
     }
 }
 
-/* Return 0 and 1 with 75% and 25% probability, respectively, using the specified function and bitwise AND operator */
-int random2() {
-    int x = random1();
-    int y = random1();
+int random_sale_decider(){
+    int x;
 
-    return (x & y);
-}
+    x = rand()%4;
 
-int random1()
-{
-    // `rand()` produces a random number
-    int random = rand();
+    if (x == 1)
+        return 1;
 
-    // if the random number is even, return 0; otherwise, return 1
-    return (random % 2);
+    return 0;
 }
 
 /* This function sorts all the store_info after lowest price */
