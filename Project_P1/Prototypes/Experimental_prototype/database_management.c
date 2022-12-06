@@ -3,11 +3,19 @@
 #include <stdlib.h>
 #include "utilities.h"
 
-bool check_profile_existence(FILE * file, char * file_name, t_user_profile profile, t_user_profile database[])
-{
-    if (strcmp(database[profile.id].username, profile.username) == 0 &&
-        strcmp(database[profile.id].password, profile.password) == 0)
-        return true;
+bool validate_credentials_in_database(FILE * file, char * file_name, char username[], char password[],
+                                      t_user_profile database[], int * id, bool IDFLAG){
+
+    for (int i = 0; i < count_lines_in_file(file, file_name); i++)
+    {
+        if (strcmp(database[i].username, username) == 0 && strcmp(database[i].password, password) == 0)
+        {
+            if (IDFLAG)
+                *id = i;
+
+            return true;
+        }
+    }
 
     return false;
 }
@@ -18,33 +26,33 @@ t_user_profile create_profile(int id)
 
     new_profile.id = id;
 
-    printf("Please enter your name>\n ");
+    printf("\nPlease enter your name> ");
     scanf("%s", new_profile.name);
 
-    printf("Please enter your age>\n ");
+    printf("Please enter your age> ");
     scanf("%d", &new_profile.age);
 
-    printf("Please enter your address>\n ");
+    printf("Please enter your address> ");
     scanf("%s", new_profile.address);
 
-    printf("Select a username>\n ");
-    scanf("%s", new_profile.username);
+    printf("Enter coordinates of your address (x.x, y.y)> ");
+    scanf("%lf, %lf", &new_profile.longitude, &new_profile.latitude);
 
-    printf("Select a password>\n ");
-    scanf("%s", new_profile.password);
-
-    //TODO: long & lat | test geolocation conversion with http requests
-    new_profile.longitude = 1.1; new_profile.latitude = 1.1;
-
-    printf("Max distance you're willing to travel>\n ");
+    printf("Max distance you're willing to travel> ");
     scanf("%lf", &new_profile.max_distance);
 
-    printf("Select a transport option>\n ");
+    printf("Select a transport option>\n");
     for (int i = 0; i < 4; i++)
     {
         printf("[%d] %s\n", i, string_from_enum_transport(i));
     }
     scanf("%d", &new_profile.transport);
+
+    printf("Select a username> ");
+    scanf("%s", new_profile.username);
+
+    printf("Select a password> ");
+    scanf("%s", new_profile.password);
 
     return new_profile;
 }
@@ -74,7 +82,7 @@ void upload_profile(FILE * file, char * file_name, t_user_profile profile, t_use
 
     validate_file_pointer(file);
 
-    if (!(check_profile_existence(file, file_name, profile, database)))
+    if (!validate_credentials_in_database(file, file_name, profile.username, profile.password, database, 0, false))
         fprintf(file, "%d %s %s %s %s %lf %lf %f %d %u\n", profile.id, profile.name, profile.address, profile.username, profile.password,
             profile.longitude, profile.latitude, profile.max_distance, profile.age, profile.transport);
 

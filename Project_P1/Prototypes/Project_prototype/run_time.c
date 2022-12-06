@@ -103,7 +103,6 @@ void sort_stores(store_db store_info[], int s)
 void print_promotions(groceries_db list[], int store) {
     int i, j = 0;
 
-
     for (i = 0; i < MAX_PRODUCTS; i++) {
         if (strcmp(user_groceries[j], list[store].name[i]) == 0) {
             j++;

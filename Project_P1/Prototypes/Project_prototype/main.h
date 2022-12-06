@@ -8,8 +8,8 @@
 #include <string.h>
 #include <time.h>
 
-#define MAX_PRODUCTS 100         // Amount of products
-#define MAX_STORES 5    // Amount of stores
+#define MAX_PRODUCTS 100 // Amount of products
+#define MAX_STORES 5     // Amount of stores
 
 typedef struct groceries {
     int id[MAX_PRODUCTS];
