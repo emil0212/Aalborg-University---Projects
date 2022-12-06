@@ -11,38 +11,40 @@ void run_time()
     //Getting all stores
     groceries_db *ptrToAllStoreGroceries = create_price_database();
 
-    checkForInvalidProducts(ptrToAllStoreGroceries, user);
+    check_shoppinglist(user);
 
-    setOnSale(ptrToAllStoreGroceries);
+    set_on_sale(ptrToAllStoreGroceries);
 
     //Getting all groceries from each store
     store_db *ptrToAllStoreList = create_store_database(user);
 
-    sumOfProducts(ptrToAllStoreGroceries, ptrToAllStoreList);
-    bsortDesc(ptrToAllStoreList, MAX_STORES);
+    sum_of_products(ptrToAllStoreGroceries, ptrToAllStoreList);
+    sort_stores(ptrToAllStoreList, MAX_STORES);
 
     print(ptrToAllStoreGroceries, user, ptrToAllStoreList);
 }
 
-void checkForInvalidProducts(groceries_db store_prices[], userdata user) {
-    int check = 0;
-    int j = 0;
 
+int check_product(int shoppinglist) {
     for (int i = 0; i < MAX_PRODUCTS; i++) {
-        if (strcmp(user_groceries[j], store_prices[1].name[i]) == 0) {
-            i = 0;
-            check += 1;
-            j++;
+        if (strcmp(user_groceries[shoppinglist], product_names[i]) == 0) {
+            return 1;
         }
     }
-
-    if (check != user.amount) {
-        printf("1 or more item in your shoppinglist is invalid. Please check for spelling mistakes!");
-        exit(EXIT_FAILURE);
-    }
+    return 0;
 }
 
-void sumOfProducts(groceries_db store_prices[], store_db store_info[]) {
+void check_shoppinglist(userdata user) {
+    for (int i = 0; i < user.amount; i++) {
+        if (check_product(i) == 0) {
+            printf("\nItem: %s is invalid, please update here: ", user_groceries[i]);
+            scanf(" %s", user_groceries[i]);
+        }
+    }
+    printf("Shoppinglist loaded successfully!");
+}
+
+void sum_of_products(groceries_db store_prices[], store_db store_info[]) {
     double sum;
     int j;
 
@@ -59,33 +61,27 @@ void sumOfProducts(groceries_db store_prices[], store_db store_info[]) {
     }
 }
 
-void setOnSale(groceries_db store_prices[]) {
+void set_on_sale(groceries_db store_prices[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         for (int k = 0; k < MAX_PRODUCTS; k++) {
-            store_prices[i].onSale[k] = random2();
+            store_prices[i].onSale[k] = random_sale_decider();
         }
     }
 }
 
-/* Return 0 and 1 with 75% and 25% probability, respectively, using the specified function and bitwise AND operator */
-int random2() {
-    int x = random1();
-    int y = random1();
+int random_sale_decider(){
+    int x;
 
-    return (x & y);
-}
+    x = rand()%4;
 
-int random1()
-{
-    // `rand()` produces a random number
-    int random = rand();
+    if (x == 1)
+        return 1;
 
-    // if the random number is even, return 0; otherwise, return 1
-    return (random % 2);
+    return 0;
 }
 
 /* This function sorts all the store_info after lowest price */
-void bsortDesc(store_db store_info[], int s)
+void sort_stores(store_db store_info[], int s)
 {
     int i, j;
     store_db temp;
