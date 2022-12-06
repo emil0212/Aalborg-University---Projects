@@ -1,31 +1,31 @@
 Sushi
-Snow Peas
-Condensed milk
+Snow-Peas
+Condensed-milk
 Raspberries
 Radishes
-Curry leaves
+Curry-leaves
 Thyme
 Cloves
 Snapper
-Honeydew melons
-Green beans
-Onion powder
+Honeydew-melons
+Green-beans
+Onion-powder
 Breadfruit
-Lima beans
+Lima-beans
 Pepper
 Catfish
 Lettuce
 Clams
-Cappuccino Latte
+Cappuccino-Latte
 Sage
 Mussels
 Kiwi
 Cabbage
-Pumpkin seeds
-Brussels sprouts
+Pumpkin-seeds
+Brussels-sprouts
 Octopus
 Chard
-Cocoa powder
+Cocoa-powder
 Pineapples
 Fennel
 Chocolate
@@ -35,23 +35,23 @@ Honey
 Pistachios
 Bacon
 Shitakes
-Split peas
-Red snapper
-Wild rice
-Jelly beans
+Split-peas
+Red-snapper
+Wild-rice
+Jelly-beans
 Bruschetta
 Breadcrumbs
 Tea
-Olive oil
+Olive-oil
 Turnips
-Acorn squash
+Acorn-squash
 Sauerkraut
-White beans
+White-beans
 Strawberries
 Pasta
-Baking powder
-Chili sauce
-Lemon juice
+Baking-powder
+Chili-sauce
+Lemon-juice
 Dill
 Chickpeas
 Cream
@@ -59,14 +59,14 @@ Cantaloupes
 Dumpling
 Cauliflower
 Coriander
-Rice paper
+Rice-paper
 Barley
 Apricots
-Barley sugar
+Barley-sugar
 Kahlua
-Maraschino cherries
+Maraschino-cherries
 Beets
-Moo shu wrappers
+Moo-shu-wrappers
 Peanuts
 Prosciutto
 Macaroni
@@ -76,11 +76,11 @@ Chicory
 Spinach
 Trout
 Almonds
-Brown sugar
+Brown-sugar
 Paprika
 Pork
 Lobsters
-Havarti cheese
+Havarti-cheese
 Bouillon
 Grapes
 Cider
@@ -90,11 +90,11 @@ Beef
 Swiss cheese
 Rice
 Tarragon
-Romaine lettuce
+Romaine-lettuce
 Rosemary
 Ginger ale
 Canola oil
 Amaretto
 Blueberries
-Powdered sugar
+Powdered-sugar
 Coffee
