@@ -39,9 +39,11 @@ void check_shoppinglist(userdata user) {
         if (check_product(i) == 0) {
             printf("\nItem: %s is invalid, please update here: ", user_groceries[i]);
             scanf(" %s", user_groceries[i]);
+            printf("\nThis will not update the product in shoppinglist.txt, please consider correcting your mistake in the file!");
         }
     }
-    printf("Shoppinglist loaded successfully!");
+    printf("\n\n===================================\n=Shoppinglist loaded successfully!=\n===================================\n");
+    sleep(1);
 }
 
 void sum_of_products(groceries_db store_prices[], store_db store_info[]) {
