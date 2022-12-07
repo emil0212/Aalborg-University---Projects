@@ -46,6 +46,12 @@ void check_shoppinglist(userdata user) {
     sleep(1);
 }
 
+/**
+ * This is a void function with no return value.
+ * It's purpose is to assign values to each object in the store_info array
+ * @param store_prices | array of type groceries_db consisting of objects of type groceries_db
+ * @param store_info   | array of type store_db consisting of objects of type store_db
+ */
 void sum_of_products(groceries_db store_prices[], store_db store_info[])
 {
     //Variable declarations
