@@ -96,8 +96,6 @@ int random_sale_decider(){
 /* This function sorts all the store_info after lowest price*/
 void sort_stores(store_db store_info[], int s)
 {
-
-
     //Quicksort method
     qsort(store_info, MAX_STORES, sizeof(store_db), comparator);
 
