@@ -7,7 +7,7 @@
 #include "distance.h"
 #include "file_management.h"
 
-char user_groceries[100][15];
+char user_groceries[MAX_PRODUCTS][30];
 
 int load_shoppinglist(FILE *list);
 void print(groceries_db store_prices[], userdata user, store_db store_info[]);
