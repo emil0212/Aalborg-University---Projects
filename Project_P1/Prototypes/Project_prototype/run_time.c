@@ -93,15 +93,19 @@ int random_sale_decider(){
     return 0;
 }
 
-/* This function sorts all the store_info after lowest price */
+/* This function sorts all the store_info after lowest price*/
 void sort_stores(store_db store_info[], int s)
 {
-    int i, j;
-    store_db temp;
 
-    for (i = 0; i < s - 1; i++)
+
+    //Quicksort method
+    qsort(store_info, MAX_STORES, sizeof(store_db), comparator);
+
+    //Bubblesort method
+    /*store_db temp;
+    for (int i = 0; i < s - 1; i++)
     {
-        for (j = 0; j < (s - 1-i); j++)
+        for (int j = 0; j < (s - 1-i); j++)
         {
             if (store_info[j].sum > store_info[j + 1].sum)
             {
@@ -110,7 +114,18 @@ void sort_stores(store_db store_info[], int s)
                 store_info[j + 1] = temp;
             }
         }
-    }
+    }*/
+}
+
+int comparator (const void * p1, const void * p2)
+{
+    store_db * store1 = (store_db*)p1;
+    store_db * store2 = (store_db*)p2;
+
+    if (store1->sum > store2->sum)
+        return store1 - store2;
+    else
+        return store2 - store1;
 }
 
 void print_promotions(groceries_db list[], int store) {

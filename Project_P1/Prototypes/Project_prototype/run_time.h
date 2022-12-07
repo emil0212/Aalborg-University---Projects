@@ -19,3 +19,4 @@ int random_sale_decider();
 void check_shoppinglist(userdata user);
 void print_promotions(groceries_db list[], int store);
 int check_product(int shoppinglist);
+int comparator (const void * p1, const void * p2);
