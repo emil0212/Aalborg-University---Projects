@@ -62,10 +62,14 @@ void sum_of_products(groceries_db store_prices[], store_db store_info[])
         for (int k = 0; k < MAX_PRODUCTS; k++)
         {
             //Comparison function (strcmp = stringcompare), compares each product in shoppinglist with each product in the store (store_prices[i].name[k])
+            //If return value of strcmp is 0 then there's no difference between the two compared elements
             if (strcmp(user_groceries[j], store_prices[i].name[k]) == 0)
             {
+                //Incrementing the local sum variable by the cost of the product that was just found
                 sum += store_prices[i].cost[k];
-                k = 0; // Resetting the loop, so we can find products before the found one
+                //Resetting variable k, so we can loop through all of the products for next store again.
+                k = 0;
+                //Incrementing j by one, so we can compare next product in the shoppinglist with all of the products in the store
                 j++;
             }
         }
