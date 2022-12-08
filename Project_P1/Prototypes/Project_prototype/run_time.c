@@ -173,7 +173,7 @@ userdata create_user() {
     userdata session;
     printf("\nEnter name please: ");
     scanf(" %s", session.name);
-    printf("\nPlease enter your location in a coordinate format >> latitude, longitude : ");
+    printf("\nPlease enter your location in a coordinate format: ");
     scanf(" %lf, %lf", &session.location_x, &session.location_y);
     printf("\nPlease enter the number of your preferred mode of transport:\n(1) On foot\n(2) Bike\n(3) Car\n");
     scanf(" %d", &session.mode);

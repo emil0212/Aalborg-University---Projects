@@ -11,9 +11,6 @@
 #define MAX_PRODUCTS 100 // Amount of products
 #define MAX_STORES 5     // Amount of stores
 
-typedef struct groceries {
-} groceries_db;
-
 typedef struct store {
     double x_coordinates, y_coordinates;
     char name[30];
