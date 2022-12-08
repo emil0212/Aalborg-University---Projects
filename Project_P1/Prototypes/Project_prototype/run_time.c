@@ -9,7 +9,7 @@ void run_time()
     userdata user = create_user();
 
     //Getting all stores
-    groceries_db *ptrToAllStoreGroceries = create_price_database();
+    store_db *ptrToAllStoreGroceries = create_price_database();
 
     check_shoppinglist(user, ptrToAllStoreGroceries);
 
@@ -25,18 +25,18 @@ void run_time()
 }
 
 
-int check_product(int shoppinglist) {
+int check_product(int shoppinglist, store_db store_info[]) {
     for (int i = 0; i < MAX_PRODUCTS; i++) {
-        if (strcmp(user_groceries[shoppinglist], product_names[i]) == 0) {
+        if (strcmp(user_groceries[shoppinglist], store_info[1].product_name[i]) == 0) {
             return 1;
         }
     }
     return 0;
 }
 
-void check_shoppinglist(userdata user) {
+void check_shoppinglist(userdata user, store_db store_info[]) {
     for (int i = 0; i < user.amount; i++) {
-        if (check_product(i) == 0) {
+        if (check_product(i, store_info) == 0) {
             printf("\nItem: %s is invalid, please update here: ", user_groceries[i]);
             scanf(" %s", user_groceries[i]);
             printf("\nThis will not update the product in shoppinglist.txt, please consider correcting your mistake in the file!");
@@ -150,7 +150,7 @@ void print_promotions(store_db list[], int store) {
 }
 
 void print(store_db store_prices[], userdata user, store_db store_info[]) {
-    printf("\nYour product_name is set to: %s "
+    printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
            "\n\nYou have %d item(s) in your shopping list:", user.name, user.location_x, user.location_y, transport_names[user.mode - 1], user.distance, user.amount);
@@ -171,7 +171,7 @@ void print(store_db store_prices[], userdata user, store_db store_info[]) {
 
 userdata create_user() {
     userdata session;
-    printf("\nEnter product_name please: ");
+    printf("\nEnter name please: ");
     scanf(" %s", session.name);
     printf("\nPlease enter your location in a coordinate format >> latitude, longitude : ");
     scanf(" %lf, %lf", &session.location_x, &session.location_y);

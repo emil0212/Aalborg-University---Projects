@@ -21,11 +21,11 @@ store_db * create_store_database(userdata session)
     return arrayOfStoreInfo;
 }
 
-groceries_db * create_price_database()
+store_db * create_price_database()
 {
     char filename[20];
     FILE *db;
-    groceries_db* arrayOfStorePrices = malloc(MAX_STORES * sizeof *arrayOfStorePrices);
+    store_db* arrayOfStorePrices = malloc(MAX_STORES * sizeof *arrayOfStorePrices);
 
     for (int i = 0; i < MAX_STORES; i++) {
         sprintf(filename, "%d_groceries.txt", i);
@@ -53,9 +53,9 @@ char * find_product_name(int id)
     return temp;
 }
 
-groceries_db collect_list_of_groceries(FILE *db)
+store_db collect_list_of_groceries(FILE *db)
 {
-    groceries_db productList;
+    store_db productList;
 
     validate_file_pointer(db);
 

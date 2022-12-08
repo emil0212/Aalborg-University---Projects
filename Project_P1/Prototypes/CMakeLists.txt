@@ -4,3 +4,4 @@ add_executable(Project-prototype "Project_prototype/main.c" "Project_prototype/m
 file(COPY "Experimental_prototype/Databases/" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY Project_prototype/groceries_database/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY Project_prototype/store_database/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY Project_prototype/product_database/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
