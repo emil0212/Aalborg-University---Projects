@@ -71,6 +71,7 @@ void sum_of_products(groceries_db store_prices[], store_db store_info[])
             //If return value of strcmp is 0 then there's no difference between the two compared elements
             if (strcmp(user_groceries[j], store_prices[i].name[k]) == 0)
             {
+
                 //Incrementing the local sum variable by the cost of the product that was just found
                 sum += store_prices[i].cost[k];
                 //Resetting variable k, so we can loop through all of the products for next store again.
@@ -104,10 +105,10 @@ int random_sale_decider(){
 }
 
 /* This function sorts all the store_info after lowest price*/
-void sort_stores(store_db store_info[], int s)
+void sort_stores(store_db store_info[], int stores_amount)
 {
     //Quicksort method
-    qsort(store_info, MAX_STORES, sizeof(store_db), comparator);
+    qsort(store_info, stores_amount, sizeof(*store_info), comparator);
 
     //Bubblesort method
     /*store_db temp;
@@ -131,9 +132,9 @@ int comparator (const void * p1, const void * p2)
     store_db * store2 = (store_db*)p2;
 
     if (store1->sum > store2->sum)
-        return store1 - store2;
-    else
         return store2 - store1;
+    else
+        return store1 - store2;
 }
 
 void print_promotions(groceries_db list[], int store) {

@@ -124,7 +124,7 @@ void registration_page(FILE * file, char * file_name)
 
     upload_profile(file, file_name, new_profile, database);
 
-    printf("Succesfully created a profile!\n\n");
+    printf("Successfully created a profile!\n\n");
     initial_screen();
 }
 

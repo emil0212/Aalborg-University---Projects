@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "utilities.h"
 
+#define TRANSPORT_OPTIONS 4 //Amount of transport options
+
 bool validate_credentials_in_database(FILE * file, char * file_name, char username[], char password[],
                                       t_user_profile database[], int * id, bool IDFLAG){
 
@@ -42,7 +44,7 @@ t_user_profile create_profile(int id)
     scanf("%lf", &new_profile.max_distance);
 
     printf("Select a transport option>\n");
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < TRANSPORT_OPTIONS; i++)
     {
         printf("[%d] %s\n", i, string_from_enum_transport(i));
     }
@@ -82,7 +84,7 @@ void upload_profile(FILE * file, char * file_name, t_user_profile profile, t_use
 
     validate_file_pointer(file);
 
-    if (!validate_credentials_in_database(file, file_name, profile.username, profile.password, database, 0, false))
+    if (!validate_credentials_in_database(file, file_name, profile.username, profile.password, database, NULL, false))
         fprintf(file, "%d %s %s %s %s %lf %lf %f %d %u\n", profile.id, profile.name, profile.address, profile.username, profile.password,
             profile.longitude, profile.latitude, profile.max_distance, profile.age, profile.transport);
 
