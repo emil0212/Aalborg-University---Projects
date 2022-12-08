@@ -1,13 +1,15 @@
 #include "main.h"
-#include "distance.h"
-#include "file_management.h"
+#include "utilities.h"
+#include "store_management.h"
 
-store_db * create_store_database(userdata session) {
+store_db * create_store_database(userdata session)
+{
     char filename[20];
     FILE *db;
     store_db* arrayOfStoreInfo = malloc(MAX_STORES * sizeof *arrayOfStoreInfo);
 
-    for (int k = 0; k < MAX_STORES; k++) {
+    for (int k = 0; k < MAX_STORES; k++)
+    {
         sprintf(filename, "%d_info.txt", k);
         db = fopen(filename, "r");
         arrayOfStoreInfo[k] = collect_store_info(db);
@@ -19,7 +21,8 @@ store_db * create_store_database(userdata session) {
     return arrayOfStoreInfo;
 }
 
-groceries_db * create_price_database() {
+groceries_db * create_price_database()
+{
     char filename[20];
     FILE *db;
     groceries_db* arrayOfStorePrices = malloc(MAX_STORES * sizeof *arrayOfStorePrices);
@@ -30,34 +33,48 @@ groceries_db * create_price_database() {
         arrayOfStorePrices[i] = collect_list_of_groceries(db);
         fclose(db);
     }
+
     return arrayOfStorePrices;
 }
 
-groceries_db collect_list_of_groceries(FILE *db) {
+char * find_product_name(int id)
+{
+    char *temp = malloc(MAX_PRODUCTS * sizeof(char));
+
+    FILE * file = fopen("productslist.txt", "r");
+    validate_file_pointer(file);
+
+    for (int i = 0; i < id; i++) {
+        fscanf(file, " %*s");
+    }
+
+    fscanf(file," %s", temp);
+
+    return temp;
+}
+
+groceries_db collect_list_of_groceries(FILE *db)
+{
     groceries_db productList;
 
-    if (db == NULL) {
-        perror("Unable to open file");
-        exit(EXIT_FAILURE);
-    } else {
-        for (int i = 0; i < MAX_PRODUCTS; i++) {
-            fscanf(db, " %lf", &productList.cost[i]);
-            productList.id[i] = i;
-            productList.name[i] = product_names[i];
-        }
+    validate_file_pointer(db);
+
+    for (int i = 0; i < MAX_PRODUCTS; i++)
+    {
+        fscanf(db, " %lf", &productList.cost[i]);
+        productList.name[i] = find_product_name(i);
     }
+
     return productList;
 }
 
-store_db collect_store_info(FILE *db) {
+store_db collect_store_info(FILE *db)
+{
     store_db storeInfo;
 
-    if (db == NULL) {
-        perror("Unable to open file");
-        exit(EXIT_FAILURE);
-    }
-    else {
-        fscanf(db, "%s %s %lf %lf", storeInfo.name, storeInfo.address, &storeInfo.x_coordinates, &storeInfo.y_coordinates);
-    }
+    validate_file_pointer(db);
+
+    fscanf(db, "%s %s %lf %lf", storeInfo.name, storeInfo.address, &storeInfo.x_coordinates, &storeInfo.y_coordinates);
+
     return storeInfo;
 }

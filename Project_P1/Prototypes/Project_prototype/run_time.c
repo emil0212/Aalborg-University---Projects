@@ -11,7 +11,7 @@ void run_time()
     //Getting all stores
     groceries_db *ptrToAllStoreGroceries = create_price_database();
 
-    check_shoppinglist(user);
+    check_shoppinglist(user, ptrToAllStoreGroceries);
 
     set_on_sale(ptrToAllStoreGroceries);
 
@@ -63,15 +63,13 @@ void sum_of_products(groceries_db store_prices[], store_db store_info[])
     {
         //Variable definitions
         j = 0, sum = 0;
-
         //Nested loop going through all of the products in each store
         for (int k = 0; k < MAX_PRODUCTS; k++)
         {
-            //Comparison function (strcmp = stringcompare), compares each product in shoppinglist with each product in the store (store_prices[i].name[k])
+            //Comparison function (strcmp = stringcompare), compares each product in shoppinglist with each product in the total list of products)
             //If return value of strcmp is 0 then there's no difference between the two compared elements
             if (strcmp(user_groceries[j], store_prices[i].name[k]) == 0)
             {
-
                 //Incrementing the local sum variable by the cost of the product that was just found
                 sum += store_prices[i].cost[k];
                 //Resetting variable k, so we can loop through all of the products for next store again.
@@ -112,9 +110,9 @@ void sort_stores(store_db store_info[], int stores_amount)
 
     //Bubblesort method
     /*store_db temp;
-    for (int i = 0; i < s - 1; i++)
+    for (int i = 0; i < stores_amount - 1; i++)
     {
-        for (int j = 0; j < (s - 1-i); j++)
+        for (int j = 0; j < (stores_amount - 1-i); j++)
         {
             if (store_info[j].sum > store_info[j + 1].sum)
             {
@@ -190,7 +188,6 @@ userdata create_user() {
 
     return session;
 }
-
 
 int load_shoppinglist(FILE *list) {
     int i = 0;

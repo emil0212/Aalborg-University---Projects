@@ -4,8 +4,8 @@
 #endif //P1_PROTOTYPE_RUN_TIME_H
 
 #include "main.h"
-#include "distance.h"
-#include "file_management.h"
+#include "utilities.h"
+#include "store_management.h"
 
 char user_groceries[MAX_PRODUCTS][30];
 

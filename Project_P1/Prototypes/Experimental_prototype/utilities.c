@@ -25,7 +25,8 @@ void validate_file_pointer(FILE * file)
     }
 }
 
-int count_lines_in_file(FILE * file, char *file_name){
+int count_lines_in_file(FILE * file, char *file_name)
+{
     int count_lines = 0;
 
     file = fopen(file_name, "r");
