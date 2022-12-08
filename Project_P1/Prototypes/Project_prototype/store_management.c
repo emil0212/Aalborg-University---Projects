@@ -18,11 +18,11 @@ store_db * create_store_database(userdata session)
                                                 arrayOfStoreInfo[k].x_coordinates, arrayOfStoreInfo[k].y_coordinates);
         fclose(db);
     }
-    create_price_database(arrayOfStoreInfo);
+    update_store_database_with_prices(arrayOfStoreInfo);
     return arrayOfStoreInfo;
 }
 
-void create_price_database(store_db arrayOfStorePrices[])
+void update_store_database_with_prices(store_db arrayOfStorePrices[])
 {
     char filename[20];
     FILE *db;
@@ -48,16 +48,17 @@ char * find_product_name(int id)
     }
 
     fscanf(file," %s", temp);
+    fclose(file);
 
     return temp;
 }
 
-void collect_list_of_groceries(FILE *db, store_db arrayOfStorePrices[], int number)
+void collect_list_of_groceries(FILE *db, store_db arrayOfStoreInfo[], int number)
 {
     for (int i = 0; i < MAX_PRODUCTS; i++)
     {
-        fscanf(db, " %lf", &arrayOfStorePrices[number].product_cost[i]);
-        arrayOfStorePrices[number].product_name[i] = find_product_name(i);
+        fscanf(db, " %lf", &arrayOfStoreInfo[number].product_cost[i]);
+        arrayOfStoreInfo[number].product_name[i] = find_product_name(i);
     }
 }
 
