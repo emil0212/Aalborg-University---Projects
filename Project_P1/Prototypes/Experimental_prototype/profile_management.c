@@ -28,7 +28,7 @@ t_user_profile create_profile(int id)
 
     new_profile.id = id;
 
-    printf("\nPlease enter your name> ");
+    printf("\nPlease enter your product_name> ");
     scanf("%s", new_profile.name);
 
     printf("Please enter your age> ");

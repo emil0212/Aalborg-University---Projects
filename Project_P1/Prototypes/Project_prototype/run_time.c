@@ -52,7 +52,7 @@ void check_shoppinglist(userdata user) {
  * @param store_prices | array of type groceries_db consisting of objects of type groceries_db
  * @param store_info   | array of type store_db consisting of objects of type store_db
  */
-void sum_of_products(groceries_db store_prices[], store_db store_info[])
+void sum_of_products(store_db store_prices[], store_db store_info[])
 {
     //Variable declarations
     double sum;
@@ -68,10 +68,10 @@ void sum_of_products(groceries_db store_prices[], store_db store_info[])
         {
             //Comparison function (strcmp = stringcompare), compares each product in shoppinglist with each product in the total list of products)
             //If return value of strcmp is 0 then there's no difference between the two compared elements
-            if (strcmp(user_groceries[j], store_prices[i].name[k]) == 0)
+            if (strcmp(user_groceries[j], store_prices[i].product_name[k]) == 0)
             {
-                //Incrementing the local sum variable by the cost of the product that was just found
-                sum += store_prices[i].cost[k];
+                //Incrementing the local sum variable by the product_cost of the product that was just found
+                sum += store_prices[i].product_cost[k];
                 //Resetting variable k, so we can loop through all of the products for next store again.
                 k = 0;
                 //Incrementing j by one, so we can compare next product in the shoppinglist with all of the products in the store
@@ -83,10 +83,10 @@ void sum_of_products(groceries_db store_prices[], store_db store_info[])
     }
 }
 
-void set_on_sale(groceries_db store_prices[]) {
+void set_on_sale(store_db store_prices[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         for (int k = 0; k < MAX_PRODUCTS; k++) {
-            store_prices[i].onSale[k] = random_sale_decider();
+            store_prices[i].product_onSale[k] = random_sale_decider();
         }
     }
 }
@@ -135,22 +135,22 @@ int comparator (const void * p1, const void * p2)
         return store1 - store2;
 }
 
-void print_promotions(groceries_db list[], int store) {
+void print_promotions(store_db list[], int store) {
     int i, j = 0;
 
     for (i = 0; i < MAX_PRODUCTS; i++) {
-        if (strcmp(user_groceries[j], list[store].name[i]) == 0) {
+        if (strcmp(user_groceries[j], list[store].product_name[i]) == 0) {
             j++;
-            if (list[store].onSale[i] == 1) {
-                printf("%s is on sale for %.2lf DKK!\n", list[store].name[i], list[store].cost[i]);
+            if (list[store].product_onSale[i] == 1) {
+                printf("%s is on sale for %.2lf DKK!\n", list[store].product_name[i], list[store].product_cost[i]);
             }
             i = 0;
         }
     }
 }
 
-void print(groceries_db store_prices[], userdata user, store_db store_info[]) {
-    printf("\nYour name is set to: %s "
+void print(store_db store_prices[], userdata user, store_db store_info[]) {
+    printf("\nYour product_name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
            "\n\nYou have %d item(s) in your shopping list:", user.name, user.location_x, user.location_y, transport_names[user.mode - 1], user.distance, user.amount);
@@ -171,7 +171,7 @@ void print(groceries_db store_prices[], userdata user, store_db store_info[]) {
 
 userdata create_user() {
     userdata session;
-    printf("\nEnter name please: ");
+    printf("\nEnter product_name please: ");
     scanf(" %s", session.name);
     printf("\nPlease enter your location in a coordinate format >> latitude, longitude : ");
     scanf(" %lf, %lf", &session.location_x, &session.location_y);

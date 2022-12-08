@@ -61,8 +61,8 @@ groceries_db collect_list_of_groceries(FILE *db)
 
     for (int i = 0; i < MAX_PRODUCTS; i++)
     {
-        fscanf(db, " %lf", &productList.cost[i]);
-        productList.name[i] = find_product_name(i);
+        fscanf(db, " %lf", &productList.product_cost[i]);
+        productList.product_name[i] = find_product_name(i);
     }
 
     return productList;

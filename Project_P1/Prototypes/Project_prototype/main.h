@@ -12,9 +12,6 @@
 #define MAX_STORES 5     // Amount of stores
 
 typedef struct groceries {
-    double cost[MAX_PRODUCTS];
-    char *name[MAX_PRODUCTS];
-    int onSale[MAX_PRODUCTS];
 } groceries_db;
 
 typedef struct store {
@@ -23,6 +20,10 @@ typedef struct store {
     char address[30];
     double sum;
     double distance; //distance from user
+
+    double product_cost[MAX_PRODUCTS];
+    char *product_name[MAX_PRODUCTS];
+    int product_onSale[MAX_PRODUCTS];
 } store_db;
 
 typedef struct userdata {
