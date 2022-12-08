@@ -12,29 +12,28 @@ store_db * create_store_database(userdata session)
     {
         sprintf(filename, "%d_info.txt", k);
         db = fopen(filename, "r");
+        validate_file_pointer(db);
         arrayOfStoreInfo[k] = collect_store_info(db);
         arrayOfStoreInfo[k].distance = distance(session.location_x, session.location_y,
                                                 arrayOfStoreInfo[k].x_coordinates, arrayOfStoreInfo[k].y_coordinates);
         fclose(db);
     }
-
+    create_price_database(arrayOfStoreInfo);
     return arrayOfStoreInfo;
 }
 
-store_db * create_price_database()
+void create_price_database(store_db arrayOfStorePrices[])
 {
     char filename[20];
     FILE *db;
-    store_db* arrayOfStorePrices = malloc(MAX_STORES * sizeof *arrayOfStorePrices);
 
     for (int i = 0; i < MAX_STORES; i++) {
         sprintf(filename, "%d_groceries.txt", i);
         db = fopen(filename, "r");
-        arrayOfStorePrices[i] = collect_list_of_groceries(db);
+        validate_file_pointer(db);
+        collect_list_of_groceries(db, arrayOfStorePrices, i);
         fclose(db);
     }
-
-    return arrayOfStorePrices;
 }
 
 char * find_product_name(int id)
@@ -53,26 +52,18 @@ char * find_product_name(int id)
     return temp;
 }
 
-store_db collect_list_of_groceries(FILE *db)
+void collect_list_of_groceries(FILE *db, store_db arrayOfStorePrices[], int number)
 {
-    store_db productList;
-
-    validate_file_pointer(db);
-
     for (int i = 0; i < MAX_PRODUCTS; i++)
     {
-        fscanf(db, " %lf", &productList.product_cost[i]);
-        productList.product_name[i] = find_product_name(i);
+        fscanf(db, " %lf", &arrayOfStorePrices[number].product_cost[i]);
+        arrayOfStorePrices[number].product_name[i] = find_product_name(i);
     }
-
-    return productList;
 }
 
 store_db collect_store_info(FILE *db)
 {
     store_db storeInfo;
-
-    validate_file_pointer(db);
 
     fscanf(db, "%s %s %lf %lf", storeInfo.name, storeInfo.address, &storeInfo.x_coordinates, &storeInfo.y_coordinates);
 

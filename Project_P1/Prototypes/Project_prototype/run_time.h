@@ -10,13 +10,13 @@
 char user_groceries[MAX_PRODUCTS][30];
 
 int load_shoppinglist(FILE *list);
-void print(store_db store_prices[], userdata user, store_db store_info[]);
+void print(userdata user, store_db store_info[]);
 userdata create_user();
 void sort_stores(store_db store_info[], int s);
-void sum_of_products(store_db store_prices[], store_db store_info[]);
+void sum_of_products(store_db store_info[]);
 void set_on_sale(store_db store_prices[]);
 int random_sale_decider();
 void check_shoppinglist(userdata user, store_db store_info[]);
-void print_promotions(store_db list[], int store);
+void print_promotions(store_db store_info[], int store);
 int check_product(int shoppinglist, store_db store_info[]);
 int comparator (const void * p1, const void * p2);

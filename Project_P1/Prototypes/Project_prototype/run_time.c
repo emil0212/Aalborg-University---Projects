@@ -9,19 +9,17 @@ void run_time()
     userdata user = create_user();
 
     //Getting all stores
-    store_db *ptrToAllStoreGroceries = create_price_database();
-
-    check_shoppinglist(user, ptrToAllStoreGroceries);
-
-    set_on_sale(ptrToAllStoreGroceries);
-
-    //Getting all groceries from each store
     store_db *ptrToAllStoreList = create_store_database(user);
 
-    sum_of_products(ptrToAllStoreGroceries, ptrToAllStoreList);
+    check_shoppinglist(user, ptrToAllStoreList);
+
+    set_on_sale(ptrToAllStoreList);
+
+    sum_of_products(ptrToAllStoreList);
+
     sort_stores(ptrToAllStoreList, MAX_STORES);
 
-    print(ptrToAllStoreGroceries, user, ptrToAllStoreList);
+    print(user, ptrToAllStoreList);
 }
 
 
@@ -52,7 +50,7 @@ void check_shoppinglist(userdata user, store_db store_info[]) {
  * @param store_prices | array of type groceries_db consisting of objects of type groceries_db
  * @param store_info   | array of type store_db consisting of objects of type store_db
  */
-void sum_of_products(store_db store_prices[], store_db store_info[])
+void sum_of_products(store_db store_info[])
 {
     //Variable declarations
     double sum;
@@ -68,10 +66,10 @@ void sum_of_products(store_db store_prices[], store_db store_info[])
         {
             //Comparison function (strcmp = stringcompare), compares each product in shoppinglist with each product in the total list of products)
             //If return value of strcmp is 0 then there's no difference between the two compared elements
-            if (strcmp(user_groceries[j], store_prices[i].product_name[k]) == 0)
+            if (strcmp(user_groceries[j], store_info[i].product_name[k]) == 0)
             {
                 //Incrementing the local sum variable by the product_cost of the product that was just found
-                sum += store_prices[i].product_cost[k];
+                sum += store_info[i].product_cost[k];
                 //Resetting variable k, so we can loop through all of the products for next store again.
                 k = 0;
                 //Incrementing j by one, so we can compare next product in the shoppinglist with all of the products in the store
@@ -130,26 +128,28 @@ int comparator (const void * p1, const void * p2)
     store_db * store2 = (store_db*)p2;
 
     if (store1->sum > store2->sum)
-        return store2 - store1;
+        return 1;
+    else if (store1->sum < store2->sum)
+        return -1;
     else
-        return store1 - store2;
+        return 0;
 }
 
-void print_promotions(store_db list[], int store) {
+void print_promotions(store_db store_info[], int store) {
     int i, j = 0;
 
     for (i = 0; i < MAX_PRODUCTS; i++) {
-        if (strcmp(user_groceries[j], list[store].product_name[i]) == 0) {
+        if (strcmp(user_groceries[j], store_info[store].product_name[i]) == 0) {
             j++;
-            if (list[store].product_onSale[i] == 1) {
-                printf("%s is on sale for %.2lf DKK!\n", list[store].product_name[i], list[store].product_cost[i]);
+            if (store_info[store].product_onSale[i] == 1) {
+                printf("%s is on sale for %.2lf DKK!\n", store_info[store].product_name[i], store_info[store].product_cost[i]);
             }
             i = 0;
         }
     }
 }
 
-void print(store_db store_prices[], userdata user, store_db store_info[]) {
+void print(userdata user, store_db store_info[]) {
     printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
@@ -163,7 +163,7 @@ void print(store_db store_prices[], userdata user, store_db store_info[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         if (store_info[i].distance <= user.distance) {
             printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", store_info[i].name, store_info[i].address, store_info[i].sum, store_info[i].distance);
-            print_promotions(store_prices, i);
+            print_promotions(store_info, i);
         }
         printf("---------------------------------------------------------\n");
     }
