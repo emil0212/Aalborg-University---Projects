@@ -104,7 +104,7 @@ int random_sale_decider(){
 void sort_stores(store_db store_info[], int stores_amount)
 {
     //Quicksort method
-    qsort(store_info, stores_amount, sizeof(*store_info), comparator);
+    qsort(store_info, stores_amount, sizeof(store_db), comparator);
 
     //Bubblesort method
     /*store_db temp;
