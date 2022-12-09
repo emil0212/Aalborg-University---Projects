@@ -22,7 +22,7 @@ store_db * create_store_database(userdata session)
     return arrayOfStoreInfo;
 }
 
-void create_price_database(store_db arrayOfStorePrices[])
+void update_store_database_with_prices(store_db arrayOfStorePrices[])
 {
     char filename[20];
     FILE *db;
