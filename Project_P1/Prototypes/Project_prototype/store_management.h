@@ -4,7 +4,7 @@
 #endif //P1_PROTOTYPE_FILE_MANAGEMENT_H
 
 
-void update_store_database_with_prices(store_db arrayOfStorePrices[]);
-store_db * create_store_database(userdata session);
-void collect_list_of_groceries(FILE *db, store_db arrayOfStoreInfo[], int number);
-store_db collect_store_info(FILE *db);
+void update_store_database_with_prices(t_store_db arrayOfStorePrices[]);
+t_store_db * create_store_database(t_userdata session);
+void collect_list_of_groceries(FILE *db, t_store_db arrayOfStoreInfo[], int number);
+t_store_db collect_store_info(FILE *db);

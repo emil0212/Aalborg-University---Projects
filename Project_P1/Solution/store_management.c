@@ -2,11 +2,11 @@
 #include "utilities.h"
 #include "store_management.h"
 
-store_db * create_store_database(userdata session)
+t_store_db * create_store_database(t_userdata session)
 {
     char filename[20];
     FILE *db;
-    store_db* arrayOfStoreInfo = malloc(MAX_STORES * sizeof *arrayOfStoreInfo);
+    t_store_db* arrayOfStoreInfo = malloc(MAX_STORES * sizeof *arrayOfStoreInfo);
 
     for (int k = 0; k < MAX_STORES; k++)
     {
@@ -14,15 +14,15 @@ store_db * create_store_database(userdata session)
         db = fopen(filename, "r");
         validate_file_pointer(db);
         arrayOfStoreInfo[k] = collect_store_info(db);
-        arrayOfStoreInfo[k].distance = distance(session.location_x, session.location_y,
-                                                arrayOfStoreInfo[k].x_coordinates, arrayOfStoreInfo[k].y_coordinates);
+        arrayOfStoreInfo[k].distance_from_user = distance(session.longitude, session.latitude,
+                                                          arrayOfStoreInfo[k].longitude, arrayOfStoreInfo[k].latitude);
         fclose(db);
     }
-    create_price_database(arrayOfStoreInfo);
+    update_store_database_with_prices(arrayOfStoreInfo);
     return arrayOfStoreInfo;
 }
 
-void update_store_database_with_prices(store_db arrayOfStorePrices[])
+void update_store_database_with_prices(t_store_db arrayOfStorePrices[])
 {
     char filename[20];
     FILE *db;
@@ -52,7 +52,7 @@ char * find_product_name(int id)
     return temp;
 }
 
-void collect_list_of_groceries(FILE *db, store_db arrayOfStorePrices[], int number)
+void collect_list_of_groceries(FILE *db, t_store_db arrayOfStorePrices[], int number)
 {
     for (int i = 0; i < MAX_PRODUCTS; i++)
     {
@@ -61,11 +61,11 @@ void collect_list_of_groceries(FILE *db, store_db arrayOfStorePrices[], int numb
     }
 }
 
-store_db collect_store_info(FILE *db)
+t_store_db collect_store_info(FILE *db)
 {
-    store_db storeInfo;
+    t_store_db storeInfo;
 
-    fscanf(db, "%s %s %lf %lf", storeInfo.name, storeInfo.address, &storeInfo.x_coordinates, &storeInfo.y_coordinates);
+    fscanf(db, "%s %s %lf %lf", storeInfo.name, storeInfo.address, &storeInfo.longitude, &storeInfo.latitude);
 
     return storeInfo;
 }

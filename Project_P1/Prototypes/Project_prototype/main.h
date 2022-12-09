@@ -12,25 +12,25 @@
 #define MAX_STORES 5     // Amount of stores
 
 typedef struct store {
-    double x_coordinates, y_coordinates;
+    double longitude, latitude;
     char name[30];
     char address[30];
     double sum;
-    double distance; //distance from user
+    double distance_from_user; //distance from user
 
     double product_cost[MAX_PRODUCTS];
     char *product_name[MAX_PRODUCTS];
     int product_onSale[MAX_PRODUCTS];
-} store_db;
+} t_store_db;
 
 typedef struct userdata {
     char name[30];
-    double location_x;
-    double location_y;
-    int amount;
-    int mode;
-    double distance;
-} userdata;
+    double longitude;
+    double latitude;
+    int amount_of_products_in_cart;
+    int transport_mode;
+    double max_traveling_distance;
+} t_userdata;
 
 const static char *transport_names[] = {"On foot", "Bike", "Car"};
 
