@@ -183,6 +183,9 @@ t_userdata create_user() {
     FILE *shoppingList;
 
     shoppingList = fopen(filename, "r");
+
+    validate_file_pointer(shoppingList);
+
     session.amount_of_products_in_cart = load_shoppinglist(shoppingList);
 
     return session;

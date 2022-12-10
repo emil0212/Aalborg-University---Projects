@@ -6,7 +6,8 @@
 #include <math.h>
 #include <stdio.h>
 
-#define pi 3.14159265358979323846
+
+#define pi 3.14159265358979323846   //Value representing PI
 
 double distance(double lat1, double lon1, double lat2, double lon2);
 double deg2rad(double);
