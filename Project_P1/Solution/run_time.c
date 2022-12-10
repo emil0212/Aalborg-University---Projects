@@ -46,7 +46,7 @@ void check_shoppinglist(t_userdata user, t_store_db store_info[]) {
 
 /**
  * This is a void function with no return value.
- * It's purpose is to assign values to each object in the store_info array
+ * It's purpose is to assign values to the sum variable for each element in the store_info array
  * @param store_info   | array of data type t_store_db
  */
 void sum_of_products(t_store_db store_info[])
