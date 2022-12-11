@@ -8,8 +8,8 @@
 #include <string.h>
 #include <time.h>
 
-#define MAX_PRODUCTS 100                 // Max amount_of_products_in_cart of products
-#define MAX_STORES 5                     // Max amount_of_products_in_cart of stores
+#define MAX_PRODUCTS 100                 // Max amount of products
+#define MAX_STORES 5                     // Max amount of stores
 
 typedef struct store {
     double longitude, latitude;           //Coordinates of store
