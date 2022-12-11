@@ -89,12 +89,12 @@ void sum_of_products(t_store_db store_info[])
     double sum;
     int j;
 
-    //Loop going through all of the stores
+    //Nested loop. Outer loop going through all of the stores
     for (int i = 0; i < MAX_STORES; i++)
     {
         //Variable definitions
         j = 0, sum = 0;
-        //Nested loop going through all of the products in each store
+        //Inner loop going through all of the products in each store
         for (int k = 0; k < MAX_PRODUCTS; k++)
         {
             //Comparison function (strcmp = stringcompare), compares each product
@@ -114,7 +114,7 @@ void sum_of_products(t_store_db store_info[])
                 j++;
             }
         }
-        //Return value to the array in the parameter
+        //Return value to the indexed store of the array in the parameter
         store_info[i].sum = sum;
     }
 }
@@ -160,7 +160,7 @@ int random_sale_decider(){
  */
 void sort_stores(t_store_db store_info[], int stores_amount)
 {
-    // Use the qsort function to sort the stores by distance
+    // Use the qsort function to sort the stores
     qsort(store_info, stores_amount, sizeof(t_store_db), comparator);
 }
 
