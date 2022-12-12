@@ -26,7 +26,7 @@ void run_time()
     sum_of_products(ptrToAllStoreList);
 
     // Sort the stores by distance
-    sort_stores(ptrToAllStoreList, MAX_STORES);
+    sort_stores(ptrToAllStoreList);
 
     // Print the results to the user
     print(user, ptrToAllStoreList);
@@ -156,12 +156,11 @@ int random_sale_decider(){
  * This function sorts the stores by distance.
  *
  * @param store_info An array of structures containing information about the stores
- * @param stores_amount The number of stores in the array
  */
-void sort_stores(t_store_db store_info[], int stores_amount)
+void sort_stores(t_store_db store_info[])
 {
     // Use the qsort function to sort the stores
-    qsort(store_info, stores_amount, sizeof(t_store_db), comparator);
+    qsort(store_info, MAX_STORES, sizeof(t_store_db), comparator);
 }
 
 /**
