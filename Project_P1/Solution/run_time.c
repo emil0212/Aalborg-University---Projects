@@ -153,7 +153,7 @@ int random_sale_decider(){
 }
 
 /**
- * This function sorts the stores by distance.
+ * This function sorts the stores.
  *
  * @param store_info An array of structures containing information about the stores
  */
