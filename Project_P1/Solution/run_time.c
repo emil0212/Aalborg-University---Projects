@@ -1,7 +1,6 @@
 #include "run_time.h"
 #include <unistd.h>
 
-
 /**
  * This function runs the program.
  */
