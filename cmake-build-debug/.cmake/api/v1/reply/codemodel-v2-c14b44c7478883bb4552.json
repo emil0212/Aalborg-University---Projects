@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Project_P1/Prototypes",
+					"jsonFile" : "directory-Project_P1.Prototypes-Debug-aaabcf1bf1cab627b3cc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Project_P1/Prototypes",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "Project_P1/Solution",
+					"jsonFile" : "directory-Project_P1.Solution-Debug-c8f3f91b382cd850fdf5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Project_P1/Solution",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Project_P1/Test",
+					"jsonFile" : "directory-Project_P1.Test-Debug-d97d05c2001c79b8d7eb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Project_P1/Test"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "Aalborg-University-Projects",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Experimental-prototype::@c5c4b15f3e467bf7f18d",
+					"jsonFile" : "target-Experimental-prototype-Debug-eb3385e6228db4b6cfe7.json",
+					"name" : "Experimental-prototype",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Project-prototype::@c5c4b15f3e467bf7f18d",
+					"jsonFile" : "target-Project-prototype-Debug-8ca6b1264b8a21c63dcc.json",
+					"name" : "Project-prototype",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Project-solution::@44466e972d87c8136a3b",
+					"jsonFile" : "target-Project-solution-Debug-e877f0a017af345f6f8f.json",
+					"name" : "Project-solution",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "K:/Aalborg-University---Projects/cmake-build-debug",
+		"source" : "K:/Aalborg-University---Projects"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
