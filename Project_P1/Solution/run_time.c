@@ -4,8 +4,7 @@
 /**
  * This function runs the program.
  */
-void run_time()
-{
+void run_time() {
     // Initialize the random number generator with the current time
     srand(time(NULL));
 
@@ -82,26 +81,22 @@ void check_shoppinglist(t_userdata user, t_store_db store_info[]) {
  * It's purpose is to assign values to the sum variable for each element in the store_info array
  * @param store_info   | array of data type t_store_db
  */
-void sum_of_products(t_store_db store_info[])
-{
+void sum_of_products(t_store_db store_info[]) {
     //Variable declarations
     double sum;
     int j;
 
     //Nested loop. Outer loop going through all of the stores
-    for (int i = 0; i < MAX_STORES; i++)
-    {
+    for (int i = 0; i < MAX_STORES; i++) {
         //Variable definitions
         j = 0, sum = 0;
         //Inner loop going through all of the products in each store
-        for (int k = 0; k < MAX_PRODUCTS; k++)
-        {
+        for (int k = 0; k < MAX_PRODUCTS; k++) {
             //Comparison function (strcmp = stringcompare), compares each product
             //in shoppinglist with each product in the total list of products
             //If return value of strcmp is 0 then there's no
             //difference between the two compared elements
-            if (strcmp(user_groceries[j], store_info[i].product_name[k]) == 0)
-            {
+            if (strcmp(user_groceries[j], store_info[i].product_name[k]) == 0) {
                 //Incrementing the local sum variable by the
                 //product_cost of the product that was just found
                 sum += store_info[i].product_cost[k];
@@ -139,7 +134,7 @@ void set_on_sale(t_store_db store_prices[]) {
  *
  * @return 1 if the product should be on sale, 0 otherwise
  */
-int random_sale_decider(){
+int random_sale_decider() {
     // Generate a random number between 0 and 3
     int x = rand() % 4;
 
@@ -156,8 +151,7 @@ int random_sale_decider(){
  *
  * @param store_info An array of structures containing information about the stores
  */
-void sort_stores(t_store_db store_info[])
-{
+void sort_stores(t_store_db store_info[]) {
     // Use the qsort function to sort the stores
     qsort(store_info, MAX_STORES, sizeof(t_store_db), comparator);
 }
@@ -170,11 +164,10 @@ void sort_stores(t_store_db store_info[])
  *
  * @return 1 if the first store has a higher total price, -1 if the second store has a higher total price, 0 if the total prices are equal
  */
-int comparator (const void * p1, const void * p2)
-{
+int comparator(const void *p1, const void *p2) {
     // Cast the void pointers to t_store_db pointers
-    t_store_db * store1 = (t_store_db*)p1;
-    t_store_db * store2 = (t_store_db*)p2;
+    t_store_db *store1 = (t_store_db *) p1;
+    t_store_db *store2 = (t_store_db *) p2;
 
     // Compare the total prices of the two stores
     if (store1->sum > store2->sum)
@@ -199,13 +192,21 @@ void print_promotions(t_store_db store_info[], int store) {
     for (i = 0; i < MAX_PRODUCTS; i++) {
         // Check if the current product is in the user's shopping list
         if (strcmp(user_groceries[j], store_info[store].product_name[i]) == 0) {
+
+            // Check if the value of j is larger than the size of user_groceries
+            if (j >= (sizeof(user_groceries) / sizeof(user_groceries[0]))) {
+                // If so, break out of the loop
+                break;
+            }
+
             // Increment the shopping list index
             j++;
 
             // Check if the product is on sale
             if (store_info[store].product_onSale[i] == 1) {
                 // Print a message to the user indicating that the product is on sale
-                printf("%s is on sale for %.2lf DKK!\n", store_info[store].product_name[i], store_info[store].product_cost[i]);
+                printf("%s is on sale for %.2lf DKK!\n", store_info[store].product_name[i],
+                       store_info[store].product_cost[i]);
             }
 
             // Reset the product index to 0
@@ -225,7 +226,8 @@ void print(t_userdata user, t_store_db store_info[]) {
     printf("\nYour name is set to: %s "
            "\nYour location is set to: %lf %lf"
            "\nYour preferred mode of transport is set to %s and your max travel distance is set to %lf km."
-           "\n\nYou have %d item(s) in your shopping list:", user.name, user.longitude, user.latitude, transport_names[user.transport_mode - 1], user.max_traveling_distance, user.amount_of_products_in_cart);
+           "\n\nYou have %d item(s) in your shopping list:", user.name, user.longitude, user.latitude,
+           transport_names[user.transport_mode - 1], user.max_traveling_distance, user.amount_of_products_in_cart);
 
     // Print the items in the user's shopping list
     for (int i = 0; i < user.amount_of_products_in_cart; i++) {
@@ -237,7 +239,8 @@ void print(t_userdata user, t_store_db store_info[]) {
     for (int i = 0; i < MAX_STORES; i++) {
         if (store_info[i].distance_from_user <= user.max_traveling_distance) {
             // Print the store information and total price
-            printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", store_info[i].name, store_info[i].address, store_info[i].sum, store_info[i].distance_from_user);
+            printf("\n%s %s | TOTAL PRICE: %.2lf | %.2lf KM AWAY\n", store_info[i].name, store_info[i].address,
+                   store_info[i].sum, store_info[i].distance_from_user);
 
             // Print the promotions for the current store
             print_promotions(store_info, i);
@@ -305,7 +308,7 @@ int load_shoppinglist(FILE *list) {
 
     // Set remaining elements in the array to "0"
     k = i;
-    while (k < 100) {
+    while (k < MAX_PRODUCTS) {
         strcpy(user_groceries[k], "0");
         k++;
     }

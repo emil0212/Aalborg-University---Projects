@@ -10,6 +10,9 @@
 #define pi 3.14159265358979323846   //Value representing PI
 
 double distance(double lat1, double lon1, double lat2, double lon2);
+
 double deg2rad(double);
+
 double rad2deg(double);
-void validate_file_pointer(FILE * file);
+
+void validate_file_pointer(FILE *file);
