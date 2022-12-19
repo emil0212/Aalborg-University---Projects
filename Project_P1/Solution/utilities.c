@@ -9,13 +9,14 @@
  *
  * @param file Pointer to the file to validate
  */
-void validate_file_pointer(FILE *file) {
-    if (file == NULL) {
+void validate_file_pointer(FILE *file)
+{
+    if (file == NULL)
+    {
         perror("Unable to open file");
         exit(EXIT_FAILURE);
     }
 }
-
 
 /**
  * distance calculates the distance between two points on the Earth's surface,
@@ -33,8 +34,10 @@ void validate_file_pointer(FILE *file) {
  * @param lon2 Longitude of the second point, in degrees
  * @return The distance between the two points, in kilometers
  */
-double distance(double lat1, double lon1, double lat2, double lon2) {
-    if ((lat1 == lat2) && (lon1 == lon2)) {
+double distance(double lat1, double lon1, double lat2, double lon2)
+{
+    if ((lat1 == lat2) && (lon1 == lon2))
+    {
         return 0;
     }
 
@@ -61,7 +64,8 @@ double distance(double lat1, double lon1, double lat2, double lon2) {
  * @param deg The angle in degrees to convert
  * @return The angle in radians
  */
-double deg2rad(double deg) {
+double deg2rad(double deg)
+{
     return (deg * pi / 180);
 }
 
@@ -71,7 +75,8 @@ double deg2rad(double deg) {
  * @param rad The angle in radians to convert
  * @return The angle in degrees
  */
-double rad2deg(double rad) {
+double rad2deg(double rad)
+{
     return (rad * 180 / pi);
 }
 
