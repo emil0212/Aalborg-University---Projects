@@ -214,7 +214,7 @@ void print_promotions(t_store_db store_info[], int store)
         {
 
             // Check if the value of j is larger than the size of user_groceries
-            if (j >= (sizeof(user_groceries) / sizeof(user_groceries[0])))
+            if (j > (sizeof(user_groceries) / sizeof(user_groceries[0])))
             {
                 // If so, break out of the loop
                 break;
