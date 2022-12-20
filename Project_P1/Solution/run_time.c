@@ -127,7 +127,7 @@ void sum_of_products(t_store_db store_info[])
 /**
  * This function sets some products on sale in each store.
  *
- * @param store_prices An array of structures containing information about the store prices
+ * @param store_info An array of structures containing information about the store prices
  */
 void set_on_sale(t_store_db store_info[])
 {
