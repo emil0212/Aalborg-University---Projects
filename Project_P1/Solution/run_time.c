@@ -129,7 +129,7 @@ void sum_of_products(t_store_db store_info[])
  *
  * @param store_prices An array of structures containing information about the store prices
  */
-void set_on_sale(t_store_db store_prices[])
+void set_on_sale(t_store_db store_info[])
 {
     // Iterate over the stores
     for (int i = 0; i < MAX_STORES; i++)
@@ -138,7 +138,7 @@ void set_on_sale(t_store_db store_prices[])
         for (int k = 0; k < MAX_PRODUCTS; k++)
         {
             // Set the product on sale using the random_sale_decider function
-            store_prices[i].product_onSale[k] = random_sale_decider();
+            store_info[i].product_onSale[k] = random_sale_decider();
         }
     }
 }
