@@ -1,6 +1,6 @@
 # Aalborg University Semester Projects
 
-This folder includes all the semester projects throughout Aalborg University while studying Software Engineering. It includes the project folders with each of their own project descriptions. Credits for all the collaborators in the project and many other subjects. 
+This repository contains a collection of semester projects completed by fellow students at Aalborg University and I, while pursuing our degree in Software Engineering. Each project folder includes a detailed description of the project, as well as credits for all collaborators and other relevant information. The projects contained within this repository represent the diverse range of software engineering disciplines and techniques studied during the course of the degree. 
 
 ## License
 
