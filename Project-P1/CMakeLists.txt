@@ -3,8 +3,8 @@ project(Aalborg-University-Projects C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_subdirectory(Project_P1/Prototypes)
-add_subdirectory(Project_P1/Solution)
+add_subdirectory(Prototypes)
+add_subdirectory(Solution)
 
 enable_testing()
-add_subdirectory(Project_P1/Test)
+add_subdirectory(Test)
